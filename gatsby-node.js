@@ -4,70 +4,68 @@ const createTagPages = (createPage, edges) => {
   const tagTemplate = path.resolve(`src/templates/tags.js`);
   const posts = {};
 
-  edges
-    .forEach(({ node }) => {
-      if (node.frontmatter.tags) {
-        node.frontmatter.tags
-          .forEach(tag => {
-            if (!posts[tag]) {
-              posts[tag] = [];
-            }
-            posts[tag].push(node);
-          });
-      }
-    });
+  edges.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!posts[tag]) {
+          posts[tag] = [];
+        }
+        posts[tag].push(node);
+      });
+    }
+  });
 
   createPage({
     path: '/tags',
     component: tagTemplate,
     context: {
-      posts
-    }
+      posts,
+    },
   });
 
-  Object.keys(posts)
-    .forEach(tagName => {
-      const post = posts[tagName];
-      createPage({
-        path: `/tags/${tagName}`,
-        component: tagTemplate,
-        context: {
-          posts,
-          post,
-          tag: tagName
-        }
-      })
+  Object.keys(posts).forEach(tagName => {
+    const post = posts[tagName];
+    createPage({
+      path: `/tags/${tagName}`,
+      component: tagTemplate,
+      context: {
+        posts,
+        post,
+        tag: tagName,
+      },
     });
+  });
 };
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  return graphql(`{
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          html
-          id
-          timeToRead
-          frontmatter {
-            date
-            path
-            tags
-            title
+  return graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            html
+            id
+            timeToRead
+            frontmatter {
+              date
+              path
+              tags
+              title
+            }
           }
         }
       }
     }
-  }`)
-  .then(result => {
+  `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors)
+      return Promise.reject(result.errors);
     }
 
     const posts = result.data.allMarkdownRemark.edges;
@@ -83,11 +81,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: blogPostTemplate,
         context: {
           prev,
-          next
-        }
+          next,
+        },
       });
     });
 
     return posts;
-  })
+  });
 };

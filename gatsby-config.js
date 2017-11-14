@@ -23,13 +23,14 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp'
+    'gatsby-plugin-sharp',
+    `gatsby-plugin-styled-components`,
   ],
-}
+};
