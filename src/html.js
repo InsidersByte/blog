@@ -1,7 +1,7 @@
 // @flow
 
 import React, { type Node } from 'react';
-import PropTypes from 'prop-types';
+import favicon from './images/favicon.ico';
 
 type Props = {
   body: string,
@@ -28,6 +28,7 @@ const HTML = ({ body, headComponents, postBodyComponents }: Props) => {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href={favicon} />
         {headComponents}
         {css}
       </head>
