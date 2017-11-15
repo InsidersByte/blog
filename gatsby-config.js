@@ -5,10 +5,19 @@ module.exports = {
   siteMetadata: {
     author: 'You!',
     title: `Gatsby Default (Blog) Starter`,
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `tomato`,
+        showSpinner: false,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -20,18 +29,22 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-images',
             options: {
               linkImagesToOriginal: false,
             },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -51,5 +64,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-twitter',
   ],
 };
