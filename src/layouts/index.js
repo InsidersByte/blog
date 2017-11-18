@@ -46,7 +46,7 @@ const Template = ({ location, children }: Props) => {
                 textDecoration: 'none',
               }}
             >
-              Gatsby Blog
+              Insiders Byte
             </Link>
           </h1>
         </div>

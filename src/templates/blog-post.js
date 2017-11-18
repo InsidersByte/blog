@@ -66,7 +66,7 @@ const Template = ({ data, pathContext }: Props) => {
 
   return (
     <div>
-      <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
+      <Helmet title={`Insiders Byte - ${post.frontmatter.title}`} />
       <div>
         <Title>{post.frontmatter.title}</Title>
         <Date>{post.frontmatter.date}</Date>
