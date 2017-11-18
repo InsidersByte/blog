@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-blog-starter-kit",
-  "description": "Gatsby blog starter example",
-  "version": "1.1.0",
+  "name": "@insidersbyte/blog",
+  "description": "Jonathon Kelly's private blog",
+  "version": "1.0.0",
   "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
+  "private": true,
   "dependencies": {
     "gatsby": "1.9.117",
     "gatsby-link": "1.6.28",
@@ -49,9 +50,6 @@
     "lint-staged": "5.0.0",
     "prettier": "1.8.2"
   },
-  "keywords": ["gatsby"],
-  "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "precommit": "lint-staged",
     "build": "gatsby build",

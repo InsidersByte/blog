@@ -3,18 +3,18 @@ const { name } = require('./package.json');
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
   siteMetadata: {
-    author: 'You!',
-    title: `Gatsby Default (Blog) Starter`,
-    siteUrl: `https://www.example.com`,
+    author: 'Insiders Byte',
+    title: 'Insiders Byte',
+    siteUrl: 'https://insidersbyte.github.io/blog',
   },
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: `tomato`,
+        color: 'tomato',
         showSpinner: false,
       },
     },
@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'InsidersByte',
-        short_name: 'InsidersByte',
+        name: 'Insiders Byte',
+        short_name: 'Insiders Byte',
         start_url: '/',
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
