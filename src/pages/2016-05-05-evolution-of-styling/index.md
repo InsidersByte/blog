@@ -105,7 +105,7 @@ object mapping the class names from the file to dynamically scoped class names.
 
 Here is a basic example:
 
-```
+```css
 .className {
   color: blue;
 }
@@ -122,11 +122,11 @@ element.innerHTML = `<div class="${styles.className}">
 
 After running the build steps it will generate something similar to this:
 
-```
-<div class="_1X4e_uaGgBSK9k2dt0VkGj">I love CSS Modules.</div>
+```js
+<div class="_1X4e_uaGgBSK9k2dt0VkGj">I love CSS Modules.</div>;
 ```
 
-```
+```stylus
 ._1X4e_uaGgBSK9k2dt0VkGj {
   color: blue;
 }
@@ -139,7 +139,7 @@ global classes (like bootstrap). This is easy to do all you need to do is use
 `:global()`. So for example if you want to override the `border-color` of a
 button link in bootstrap you do (this is an extract from my login form):
 
-```
+```stylus
 :global(.btn-link).forgottenLink {
   border-color: rgb(204, 204, 204);
 }
@@ -163,7 +163,7 @@ CSS Modules also have a handy feature that can be used to extend styles from
 another module, this basically works the same way as @extend in Stylus. It does
 not copy the styles but instead concatenates selectors to extend styles.
 
-```
+```stylus
 .base {
   composes: appearance from '../SomeOtherModule/styles.css';
 }

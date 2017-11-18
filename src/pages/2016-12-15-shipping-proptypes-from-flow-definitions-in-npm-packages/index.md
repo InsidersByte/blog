@@ -62,7 +62,7 @@ yarn add --dev babel-plugin-flow-react-proptypes
 
 Then by adding it to your `babelrc`.
 
-```
+```json
 {
   "presets": ["..."],
   "plugins": ["flow-react-proptypes"]
@@ -95,7 +95,7 @@ yarn add --dev babel-cli babel-plugin-flow-react-proptypes rimraf
 
 Then by setting up your `babelrc`.
 
-```
+```json
 {
   "presets": ["..."],
   "plugins": ["flow-react-proptypes"]
@@ -104,7 +104,7 @@ Then by setting up your `babelrc`.
 
 And finally setting up builds command in your `package.json`.
 
-```
+```json
 {
   "scripts": {
     "build": "npm run build:clean && npm run build:dist",
@@ -184,7 +184,7 @@ yarn add flow-copy-source --dev
 
 And finally setting up builds command in your `package.json`.
 
-```
+```json
 {
   "scripts": {
     "build": "npm run build:clean && npm run build:dist",

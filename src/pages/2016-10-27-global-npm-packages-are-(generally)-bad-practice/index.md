@@ -88,7 +88,7 @@ see if there is an executable in there before checking your `PATH`.
 
 This means if you add something like this to your `package.json`.
 
-```
+```json
 {
     ...
     "scripts": {
@@ -118,7 +118,7 @@ the [docs](https://docs.npmjs.com/misc/scripts)).
 1. **Install Dependency** - run `npm install --save-dev bower`.
 2. **Add postinstall script** - see below.
 
-```
+```json
 {
     ...
     "scripts": {
