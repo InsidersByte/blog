@@ -8,7 +8,10 @@ import ForwardIcon from 'react-icons/lib/fa/chevron-right';
 import Link from '../components/Link';
 import Tags from '../components/Tags';
 
+declare var graphql: any;
+
 type Post = {
+  html: string,
   frontmatter: {
     title: string,
     date: string,

@@ -19,6 +19,7 @@ Use this starter kit to jump start (or use as a reference) a great blog with
 1. Styled Components
 1. Flow
 1. Prettier
+1. Jest
 1. Eslint
 
 ## Set up

@@ -7,7 +7,20 @@ import TagsIcon from 'react-icons/lib/fa/tags';
 import Link from '../components/Link';
 
 type Props = {
-  pathContext: {},
+  pathContext: {
+    posts: {},
+    post: [
+      {
+        id: string,
+        frontmatter: {
+          path: string,
+          title: string,
+        },
+        excerpt: string,
+      },
+    ],
+    tag: string,
+  },
 };
 
 const Tags = ({ pathContext }: Props) => {
@@ -42,14 +55,11 @@ const Tags = ({ pathContext }: Props) => {
     <div>
       <h1>Tags</h1>
       <ul className="tags">
-        {Object.keys(posts).map(tagName => {
-          const tags = posts[tagName];
-          return (
-            <li key={tagName}>
-              <GatsbyLink to={`/tags/${tagName}`}>{tagName}</GatsbyLink>
-            </li>
-          );
-        })}
+        {Object.keys(posts).map(tagName => (
+          <li key={tagName}>
+            <GatsbyLink to={`/tags/${tagName}`}>{tagName}</GatsbyLink>
+          </li>
+        ))}
       </ul>
       <Link to="/">
         <HomeIcon /> All posts

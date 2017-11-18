@@ -13,13 +13,16 @@ const HTML = ({ body, headComponents, postBodyComponents }: Props) => {
   let css;
 
   if (process.env.NODE_ENV === 'production') {
+    /* eslint-disable global-require, import/no-webpack-loader-syntax, import/no-unresolved */
     css = (
       <style
         dangerouslySetInnerHTML={{
+          // $FlowIgnore only exists in production
           __html: require('!raw!../public/styles.css'),
         }}
       />
     );
+    /* eslint-enable */
   }
 
   return (

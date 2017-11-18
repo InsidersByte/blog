@@ -1,11 +1,19 @@
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-okaidia.css';
 import '../css/typography.css';
 
-const Template = ({ location, children }) => {
+type Props = {
+  location: {
+    pathname: string,
+  },
+  children: Function,
+};
+
+const Template = ({ location, children }: Props) => {
   const isRoot = location.pathname === '/';
 
   return (
@@ -55,10 +63,6 @@ const Template = ({ location, children }) => {
       </div>
     </div>
   );
-};
-
-Template.propTypes = {
-  children: PropTypes.func,
 };
 
 export default Template;

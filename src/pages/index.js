@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import GatsbyLink from 'gatsby-link';
 import Link from '../components/Link';
 
+declare var graphql: any;
+
 type Props = {
   data: {
     allMarkdownRemark: {

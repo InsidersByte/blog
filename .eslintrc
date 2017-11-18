@@ -9,11 +9,22 @@
 
   "parser": "babel-eslint",
 
-  "plugins": [
-    "flowtype"
-  ],
+  "plugins": ["flowtype"],
+
+  "globals": {
+    "graphql": true
+  },
 
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }]
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [""],
+        "specialLink": [],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
   }
 }

@@ -8,5 +8,12 @@
 [lints]
 
 [options]
+module.file_ext=.css
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.ico
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
 
 [strict]
