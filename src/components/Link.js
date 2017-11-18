@@ -1,12 +1,40 @@
-import React from 'react';
+// @flow
+
+import styled from 'styled-components';
 import GatsbyLink from 'gatsby-link';
 
-import '../css/link.css';
+const Link = styled(GatsbyLink)`
+  display: inline-block;
+  color: rebeccapurple;
+  padding: 0.75rem 1rem;
+  border: 2px solid rebeccapurple;
+  text-decoration: none;
+  position: relative;
 
-export default function Link({ children, className, to }) {
-  return (
-    <GatsbyLink className={[`link`].concat(className || []).join(' ')} to={to}>
-      {children}
-    </GatsbyLink>
-  );
-}
+  :after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rebeccapurple;
+    transition: 250ms ease-in-out;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    margin-top: 0;
+    z-index: -1;
+  }
+
+  :hover {
+    color: white;
+  }
+
+  :hover:after {
+    transform: scaleY(1);
+  }
+`;
+
+export default Link;

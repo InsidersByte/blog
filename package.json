@@ -2,39 +2,81 @@
   "name": "gatsby-blog-starter-kit",
   "description": "Gatsby blog starter example",
   "version": "1.1.0",
-  "author": "Dustin Schau <dustinschau@gmail.com>",
+  "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
   "dependencies": {
-    "gatsby": "~1.9.45",
-    "gatsby-link": "~1.6.17",
-    "gatsby-plugin-catch-links": "~1.0.1",
-    "gatsby-plugin-react-helmet": "~1.0.1",
-    "gatsby-plugin-react-next": "~1.0.4",
-    "gatsby-plugin-sharp": "~1.6.8",
-    "gatsby-remark-images": "~1.5.13",
-    "gatsby-source-filesystem": "~1.5.1",
-    "gatsby-transformer-remark": "~1.7.12",
-    "react": "~16.1.0",
-    "react-dom": "~16.1.0",
-    "react-icons": "~2.2.5"
+    "gatsby": "1.9.117",
+    "gatsby-link": "1.6.28",
+    "gatsby-plugin-catch-links": "1.0.9",
+    "gatsby-plugin-manifest": "1.0.8",
+    "gatsby-plugin-nprogress": "1.0.7",
+    "gatsby-plugin-offline": "1.0.10",
+    "gatsby-plugin-react-helmet": "1.0.8",
+    "gatsby-plugin-react-next": "1.0.4",
+    "gatsby-plugin-sharp": "1.6.21",
+    "gatsby-plugin-sitemap": "1.2.5",
+    "gatsby-plugin-styled-components": "2.0.2",
+    "gatsby-plugin-twitter": "1.0.12",
+    "gatsby-remark-autolink-headers": "1.4.8",
+    "gatsby-remark-copy-linked-files": "1.5.21",
+    "gatsby-remark-images": "1.5.32",
+    "gatsby-remark-prismjs": "1.2.9",
+    "gatsby-remark-smartypants": "1.4.8",
+    "gatsby-source-filesystem": "1.5.8",
+    "gatsby-transformer-remark": "1.7.21",
+    "gatsby-transformer-sharp": "1.6.14",
+    "prismjs": "1.8.4",
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
+    "react-helmet": "5.2.0",
+    "react-icons": "2.2.7",
+    "styled-components": "2.2.3"
   },
   "devDependencies": {
-    "gh-pages": "~1.0.0",
-    "prettier": "~1.8.0"
+    "babel-eslint": "8.0.2",
+    "enzyme": "3.2.0",
+    "enzyme-to-json": "3.2.2",
+    "eslint": "4.11.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.7.0",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "flow-bin": "0.59.0",
+    "gh-pages": "1.1.0",
+    "husky": "0.14.3",
+    "jest": "21.2.1",
+    "lint-staged": "5.0.0",
+    "prettier": "1.8.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "precommit": "lint-staged",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths",
-    "postdeploy": "gh-pages -d public",
     "develop": "gatsby develop",
-    "preserve": "npm run build",
     "serve": "gatsby serve",
-    "start": "npm run develop",
-    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Should probably write some tests!\""
+    "predeploy": "yarn build --prefix-paths",
+    "postdeploy": "gh-pages -d public",
+    "format":
+      "prettier --write \"*.{js,json,css,md}\" \"**/*.{js,json,css,md}\"",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern flow-typed .",
+    "test": "jest --env=jsdom --watch",
+    "pretest:ci": "yarn run lint && flow",
+    "test:ci": "jest --env=jsdom --coverage"
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.js"],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.js",
+      "<rootDir>/src/**/?(*.)(spec|test).js"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "snapshotSerializers": ["<rootDir>/node_modules/enzyme-to-json/serializer"]
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }

@@ -1,18 +1,24 @@
+// @flow
+
 import React from 'react';
 import Link from 'gatsby-link';
 
-import '../css/tags.css';
+type Props = {
+  list?: Array<string>,
+};
 
-export default function Tags({ list = [] }) {
-  return (
-    <ul className="tag-list">
-      {list.map(tag =>
-        <li key={tag}>
-          <Link to={`/tags/${tag}`}>
-            {tag}
-          </Link>
-        </li>
-      )}
-    </ul>
-  );
-}
+const Tags = ({ list = [] }: Props) => (
+  <ul>
+    {list.map(tag => (
+      <li key={tag}>
+        <Link to={`/tags/${tag}`}>{tag}</Link>
+      </li>
+    ))}
+  </ul>
+);
+
+Tags.defaultProps = {
+  list: [],
+};
+
+export default Tags;

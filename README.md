@@ -1,8 +1,10 @@
 # gatsby-blog-starter-kit
 
-[![Build Status](https://travis-ci.org/DSchau/gatsby-blog-starter-kit.svg?branch=master)](https://travis-ci.org/DSchau/gatsby-blog-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/DSchau/gatsby-blog-starter-kit.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/DSchau/gatsby-blog-starter-kit.svg?branch=master)](https://travis-ci.org/DSchau/gatsby-blog-starter-kit)
+[![Greenkeeper badge](https://badges.greenkeeper.io/DSchau/gatsby-blog-starter-kit.svg)](https://greenkeeper.io/)
 
-Use this starter kit to jump start (or use as a reference) a great blog with [gatsby][gatsby]
+Use this starter kit to jump start (or use as a reference) a great blog with
+[gatsby][gatsby]
 
 ![Blog example](./assets/gatsby-blog-starter-kit.png)
 
@@ -12,6 +14,13 @@ Use this starter kit to jump start (or use as a reference) a great blog with [ga
 1. Navigation between posts with a previous/next post button
 1. Tags and tag navigation
 1. Responsive images via [gatsby-remark-images][gatsby-remark-images]
+1. Sitemap
+1. Syntax Highlighting (with PrismJS)
+1. Styled Components
+1. Flow
+1. Prettier
+1. Jest
+1. Eslint
 
 ## Set up
 

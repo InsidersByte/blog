@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint-config-airbnb",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+
+  "parser": "babel-eslint",
+
+  "plugins": ["flowtype"],
+
+  "globals": {
+    "graphql": true
+  },
+
+  "rules": {
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [""],
+        "specialLink": [],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
+  }
+}

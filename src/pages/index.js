@@ -1,38 +1,82 @@
-import React from 'react';
-import GatsbyLink from 'gatsby-link';
-import Helmet from 'react-helmet';
+// @flow
 
+import React from 'react';
+import styled from 'styled-components';
+import GatsbyLink from 'gatsby-link';
 import Link from '../components/Link';
 
-import '../css/index.css';
+declare var graphql: any;
 
-export default function Index({ data }) {
+type Props = {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<{
+        node: {
+          id: string,
+          excerpt: string,
+          frontmatter: {
+            title: string,
+            date: string,
+            path: string,
+          },
+        },
+      }>,
+    },
+  },
+};
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 0.25rem;
+  border-bottom: 2px solid #eee;
+
+  :last-child {
+    border-bottom-width: 0;
+  }
+`;
+
+const Title = styled.h1`
+  margin: 0 auto;
+`;
+
+const Date = styled.h2`
+  margin: 0 auto;
+`;
+
+const CenteredLink = Link.extend`
+  margin: 0 auto;
+`;
+
+const Index = ({ data }: Props) => {
   const { edges: posts } = data.allMarkdownRemark;
+
   return (
-    <div className="blog-posts">
+    <div>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
-          return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1 className="title">
-                <GatsbyLink to={post.frontmatter.path}>
-                  {post.frontmatter.title}
-                </GatsbyLink>
-              </h1>
-              <h2 className="date">
-                {post.frontmatter.date}
-              </h2>
-              <p>
-                {post.excerpt}
-              </p>
-              <Link to={post.frontmatter.path}>Read more</Link>
-            </div>
-          );
-        })}
+        .map(({ node: post }) => (
+          <Container key={post.id}>
+            <Title>
+              <GatsbyLink to={post.frontmatter.path}>
+                {post.frontmatter.title}
+              </GatsbyLink>
+            </Title>
+
+            <Date>{post.frontmatter.date}</Date>
+
+            <p>{post.excerpt}</p>
+
+            <CenteredLink to={post.frontmatter.path}>Read more</CenteredLink>
+          </Container>
+        ))}
     </div>
   );
-}
+};
+
+export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {

@@ -1,45 +1,101 @@
+// @flow
+
 import React from 'react';
+import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import BackIcon from 'react-icons/lib/fa/chevron-left';
 import ForwardIcon from 'react-icons/lib/fa/chevron-right';
-
 import Link from '../components/Link';
 import Tags from '../components/Tags';
 
-import '../css/blog-post.css';
+declare var graphql: any;
 
-export default function Template({ data, pathContext }) {
+type Post = {
+  html: string,
+  frontmatter: {
+    title: string,
+    date: string,
+    tags?: Array<string>,
+    path: string,
+  },
+};
+
+type Props = {
+  data: {
+    markdownRemark: Post,
+  },
+  pathContext: {
+    next: Post,
+    prev: Post,
+  },
+};
+
+const Title = styled.h1`
+  text-align: center;
+  margin: 0;
+  padding: 0;
+`;
+
+const Date = styled.h2`
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #555;
+  margin-bottom: 1rem;
+`;
+
+const Navigation = styled.div`
+  min-height: 60px;
+`;
+
+const PreviousLink = Link.extend`
+  float: left;
+`;
+
+const NextLink = Link.extend`
+  float: right;
+`;
+
+const Spacer = styled.div`
+  flex: 1 1 100%;
+`;
+
+const Template = ({ data, pathContext }: Props) => {
   const { markdownRemark: post } = data;
   const { next, prev } = pathContext;
+
   return (
-    <div className="blog-post-container">
+    <div>
       <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h1 className="title">
-          {post.frontmatter.title}
-        </h1>
-        <h2 className="date">
-          {post.frontmatter.date}
-        </h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+      <div>
+        <Title>{post.frontmatter.title}</Title>
+        <Date>{post.frontmatter.date}</Date>
+
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
         <Tags list={post.frontmatter.tags || []} />
-        <div className="navigation">
-          {prev &&
-            <Link className="link prev" to={prev.frontmatter.path}>
+
+        <Navigation>
+          {prev && (
+            <PreviousLink to={prev.frontmatter.path}>
               <BackIcon /> {prev.frontmatter.title}
-            </Link>}
-          {next &&
-            <Link className="link next" to={next.frontmatter.path}>
+            </PreviousLink>
+          )}
+
+          <Spacer />
+
+          {next && (
+            <NextLink to={next.frontmatter.path}>
               {next.frontmatter.title} <ForwardIcon />
-            </Link>}
-        </div>
+            </NextLink>
+          )}
+        </Navigation>
       </div>
     </div>
   );
-}
+};
+
+export default Template;
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
