@@ -56,13 +56,11 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "predeploy": "yarn build --prefix-paths",
-    "postdeploy": "gh-pages -d public",
-    "format":
-      "prettier --write \"*.{js,json,css,md}\" \"**/*.{js,json,css,md}\"",
+    "deploy": "gh-pages -d public",
     "lint": "eslint --ignore-path .gitignore --ignore-pattern flow-typed .",
     "test": "jest --env=jsdom --watch",
-    "pretest:ci": "yarn run lint && flow",
-    "test:ci": "jest --env=jsdom --coverage"
+    "format":
+      "prettier --write \"*.{js,json,css,md}\" \"**/*.{js,json,css,md}\""
   },
   "jest": {
     "collectCoverageFrom": ["src/**/*.js"],
