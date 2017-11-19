@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-okaidia.css';
 import Header from '../components/Header';
+import config from '../../gatsby-config';
 import '../css/typography.css';
 
 type Props = {
@@ -22,7 +23,10 @@ const Container = styled.div`
 `;
 
 const Template = ({ location, children }: Props) => {
-  const isRoot = location.pathname === '/';
+  // The root pathname when using github pages is /blog/
+  const isRoot =
+    location.pathname === config.pathPrefix ||
+    location.pathname.replace(/\/$/, '') === config.pathPrefix;
 
   return (
     <div>
