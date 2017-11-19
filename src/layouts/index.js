@@ -19,7 +19,7 @@ const Template = ({ location, children }: Props) => {
   return (
     <div>
       <Helmet
-        title="Gatsby Default (Blog) Starter"
+        title="Insiders Byte - Blog"
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },

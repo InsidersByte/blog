@@ -1,7 +1,7 @@
-const { name } = require('./package.json');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  pathPrefix: process.env.CI ? `/${name}` : `/`,
+  pathPrefix: isProduction ? `/blog` : `/`,
   siteMetadata: {
     author: 'Insiders Byte',
     title: 'Insiders Byte',
