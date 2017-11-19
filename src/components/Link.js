@@ -5,9 +5,9 @@ import GatsbyLink from 'gatsby-link';
 
 const Link = styled(GatsbyLink)`
   display: inline-block;
-  color: rebeccapurple;
+  color: #663698;
   padding: 0.75rem 1rem;
-  border: 2px solid rebeccapurple;
+  border: 2px solid #663698;
   text-decoration: none;
   position: relative;
 
@@ -20,7 +20,7 @@ const Link = styled(GatsbyLink)`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rebeccapurple;
+    background-color: #663698;
     transition: 250ms ease-in-out;
     transform: scaleY(0);
     transform-origin: bottom;

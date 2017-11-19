@@ -39,11 +39,13 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 `;
 
 const Date = styled.h2`
-  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 `;
 
 const CenteredLink = Link.extend`
