@@ -2,7 +2,7 @@
 path: "/readme-badges"
 date: "2016-06-05T13:08:00.000Z"
 title: "README Badges"
-tags: ["badges","GitHub","README","Bitbucket"]
+tags: ["github","badges","README"]
 ---
 
 ![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Screen-Shot-2016-05-23-at-09-07-38.png)

@@ -2,7 +2,7 @@
 path: "/use-a-custom-domain-for-your-openshift-ghost-blog"
 date: "2015-03-08T19:56:31.000Z"
 title: "Use a Custom Domain for Your OpenShift Ghost Blog"
-tags: ["Ghost","OpenShift","Blog","CloudFlare","Custom Domain","DNS","Domain","Root","CNAME Flattening","CNAME","A"]
+tags: ["ghost","openshift","cloudflare"]
 ---
 
 So I decided to compile a mini tutorial comprising of five parts, which go

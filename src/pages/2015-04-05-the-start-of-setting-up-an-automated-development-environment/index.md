@@ -2,7 +2,7 @@
 path: "/automated-development-environment"
 date: "2015-04-05T09:44:00.000Z"
 title: "The start of setting up an automated development environment"
-tags: ["Automated","GitLab","Jenkins","MEAN","MEAN Stack","Puppet","ESXI","Hypervisor"]
+tags: []
 ---
 
 I know I haven't posted for a little while. I have been looking into some new

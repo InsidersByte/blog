@@ -2,7 +2,7 @@
 path: "/david-node-js-dependency-manager"
 date: "2016-04-24T20:14:48.000Z"
 title: "David - Node.js Dependency Manager"
-tags: ["Node.js","Node","npm","Dependency Manager","badges","GitHub","David","david-dm"]
+tags: ["node","npm","dependency-manager","badges","github"]
 ---
 
 ![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/david-dm.png)

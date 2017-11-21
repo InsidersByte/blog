@@ -2,7 +2,7 @@
 path: "/setting-up-ghost-on-openshift"
 date: "2015-02-21T11:45:12.000Z"
 title: "Starting a New Blog With Ghost and Openshift"
-tags: ["Getting Started","Ghost","OpenShift","Setup","Free","Blog","Install"]
+tags: ["ghost","openshift"]
 ---
 
 I recently decided to start a development blog. So I thought my first blog would

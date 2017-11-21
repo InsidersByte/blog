@@ -2,7 +2,7 @@
 path: "/evolution-of-styling"
 date: "2016-05-05T20:00:16.000Z"
 title: "Evolution of Styling"
-tags: ["React","React.js","js","JavaScript","CSS","CSS Modules","Radium","Inline Styles","Styling","PostCSS","autoprefixer","webpack","bootstrap","stylus","styl","Pluralsight","Jake Trent","Vjeux","Status Quo","Evolution of Styling"]
+tags: ["javascript","css"]
 ---
 
 ![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/css-modules-logo-small.png)

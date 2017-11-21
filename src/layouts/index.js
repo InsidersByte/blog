@@ -8,7 +8,16 @@ import Header from '../components/Header';
 import config from '../../gatsby-config';
 import '../css/styles.css';
 
+declare var graphql: any;
+
 type Props = {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string,
+      },
+    },
+  },
   location: {
     pathname: string,
   },
@@ -22,7 +31,11 @@ const Container = styled.div`
   padding-top: 0;
 `;
 
-const Template = ({ location, children }: Props) => {
+const Template = ({
+  data: { site: { siteMetadata: { title } } },
+  location,
+  children,
+}: Props) => {
   // The root pathname when using github pages is /blog/
   const isRoot =
     location.pathname === config.pathPrefix ||
@@ -31,10 +44,17 @@ const Template = ({ location, children }: Props) => {
   return (
     <div>
       <Helmet
-        title="Insiders Byte - Blog"
+        title={`${title} - Blog`}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          {
+            name: 'description',
+            content:
+              'The blog of the London, UK based software engineer Jonathon Kelly',
+          },
+          {
+            name: 'keywords',
+            content: 'developer, javascript, programming, react, node, reason',
+          },
         ]}
       />
       <Header isRoot={isRoot} />
@@ -44,3 +64,13 @@ const Template = ({ location, children }: Props) => {
 };
 
 export default Template;
+
+export const pageQuery = graphql`
+  query TitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

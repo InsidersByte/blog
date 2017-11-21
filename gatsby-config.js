@@ -60,7 +60,7 @@ module.exports = {
         short_name: 'Insiders Byte',
         start_url: '/',
         background_color: '#f7f0eb',
-        theme_color: '#a2466c',
+        theme_color: '#663698',
         display: 'minimal-ui',
         icons: [
           {
@@ -74,5 +74,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-feed',
   ],
 };
