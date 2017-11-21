@@ -11,7 +11,7 @@ const Link = styled(GatsbyLink)`
   text-decoration: none;
   position: relative;
 
-  :after {
+  ::after {
     content: '';
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@ const Link = styled(GatsbyLink)`
     color: white;
   }
 
-  :hover:after {
+  :hover::after {
     transform: scaleY(1);
   }
 `;

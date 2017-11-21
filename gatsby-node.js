@@ -1,7 +1,7 @@
 const path = require('path');
 
 const createTagPages = (createPage, edges) => {
-  const tagTemplate = path.resolve(`src/templates/tags.js`);
+  const tagTemplate = path.resolve(`src/templates/tag.js`);
   const posts = {};
 
   edges.forEach(({ node }) => {
@@ -15,16 +15,9 @@ const createTagPages = (createPage, edges) => {
     }
   });
 
-  createPage({
-    path: '/tags',
-    component: tagTemplate,
-    context: {
-      posts,
-    },
-  });
-
   Object.keys(posts).forEach(tagName => {
     const post = posts[tagName];
+
     createPage({
       path: `/tags/${tagName}`,
       component: tagTemplate,
@@ -44,7 +37,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
         edges {
@@ -72,7 +65,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     createTagPages(createPage, posts);
 
-    // Create pages for each markdown file.
     posts.forEach(({ node }, index) => {
       const prev = index === 0 ? false : posts[index - 1].node;
       const next = index === posts.length - 1 ? false : posts[index + 1].node;

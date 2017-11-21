@@ -8,7 +8,8 @@ tags: ["Node.js","Node","npm","bower","gulp","grunt","package.json"]
 ## What are npm packages
 
 If you aren't sure what npm packages are it's probably worth reading up on them
-before continuing with this post, https://docs.npmjs.com/.
+before continuing with this post,
+[https://docs.npmjs.com](https://docs.npmjs.com).
 
 There are two different ways to install them,
 [locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)

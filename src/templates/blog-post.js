@@ -31,17 +31,12 @@ type Props = {
 };
 
 const Title = styled.h1`
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 2rem 0 0;
 `;
 
-const Date = styled.h2`
-  text-align: center;
-  margin: 0;
-  padding: 0;
+const Subtitle = styled.h3`
   color: #555;
-  margin-bottom: 1rem;
+  margin: 0 0 3rem;
 `;
 
 const Navigation = styled.div`
@@ -56,10 +51,6 @@ const NextLink = Link.extend`
   float: right;
 `;
 
-const Spacer = styled.div`
-  flex: 1 1 100%;
-`;
-
 const Template = ({ data, pathContext }: Props) => {
   const { markdownRemark: post } = data;
   const { next, prev } = pathContext;
@@ -69,11 +60,12 @@ const Template = ({ data, pathContext }: Props) => {
       <Helmet title={`Insiders Byte - ${post.frontmatter.title}`} />
       <div>
         <Title>{post.frontmatter.title}</Title>
-        <Date>{post.frontmatter.date}</Date>
+
+        <Subtitle>{post.frontmatter.date}</Subtitle>
 
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <Tags list={post.frontmatter.tags || []} />
+        <Tags tags={post.frontmatter.tags || []} />
 
         <Navigation>
           {prev && (
@@ -81,8 +73,6 @@ const Template = ({ data, pathContext }: Props) => {
               <BackIcon /> {prev.frontmatter.title}
             </PreviousLink>
           )}
-
-          <Spacer />
 
           {next && (
             <NextLink to={next.frontmatter.path}>

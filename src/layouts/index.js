@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-okaidia.css';
 import Header from '../components/Header';
 import config from '../../gatsby-config';
-import '../css/typography.css';
+import '../css/styles.css';
 
 type Props = {
   location: {
@@ -18,7 +18,7 @@ type Props = {
 const Container = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 0 1.0875rem 1.45rem;
   padding-top: 0;
 `;
 
