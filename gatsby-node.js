@@ -65,17 +65,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     createTagPages(createPage, posts);
 
-    posts.forEach(({ node }, index) => {
-      const prev = index === 0 ? false : posts[index - 1].node;
-      const next = index === posts.length - 1 ? false : posts[index + 1].node;
-
+    posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {
-          prev,
-          next,
-        },
       });
     });
 

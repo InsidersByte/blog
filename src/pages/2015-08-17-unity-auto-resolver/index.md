@@ -2,7 +2,7 @@
 path: "/unity-auto-resolver"
 date: "2015-08-17T17:08:00.000Z"
 title: "Unity Auto Resolver"
-tags: ["Unity","Dependency Injection","DI","C#","Visual Studio"]
+tags: ["unity","dependency-injection","c#"]
 ---
 
 I have been using Unity ([docs found here](https://unity.codeplex.com/)) for a

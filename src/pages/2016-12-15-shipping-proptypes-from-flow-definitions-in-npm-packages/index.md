@@ -2,7 +2,7 @@
 path: "/shipping-proptypes-from-flow-definitions-in-npm-packages"
 date: "2016-12-15T13:31:15.000Z"
 title: "Shipping PropTypes from Flow definitions in NPM Packages"
-tags: ["npm","React","React.js","flow","flowtype"]
+tags: ["npm","react","flow"]
 ---
 
 I have been using [flow] to add type safety to my JavaScript for a few months

@@ -2,7 +2,7 @@
 path: "/creating-charts-in-react-with-d3"
 date: "2016-09-22T06:37:20.000Z"
 title: "Creating Charts in React with D3"
-tags: ["React","React.js","D3","D3.js"]
+tags: ["react","d3"]
 ---
 
 In this post, I am hoping to introduce a way of creating charts in React.js with

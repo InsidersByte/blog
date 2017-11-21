@@ -2,7 +2,7 @@
 path: "/global-npm-packages-are-generally-bad-practice"
 date: "2016-10-27T19:41:00.000Z"
 title: "Global npm packages are (generally) bad practice"
-tags: ["Node.js","Node","npm","bower","gulp","grunt","package.json"]
+tags: ["npm","node","best-practices"]
 ---
 
 ## What are npm packages

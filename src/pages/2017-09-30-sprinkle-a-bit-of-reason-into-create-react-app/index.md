@@ -2,7 +2,7 @@
 path: "/sprinkle-a-bit-of-reason-into-create-react-app"
 date: "2017-09-30T09:53:54.000Z"
 title: "Sprinkle a bit of Reason into Create React App"
-tags: ["React","Reason","ReasonML","create-react-app","ocaml","bucklescript"]
+tags: ["react","reason","create-react-app","ocaml","bucklescript"]
 ---
 
 ![](https://reasonml.github.io/static/reason_300.5d19cfa6.png)

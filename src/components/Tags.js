@@ -9,7 +9,7 @@ type Props = {
 };
 
 const List = styled.ul`
-  padding: 0;
+  padding: 0 0 0.5rem;
   list-style: none;
   list-style-image: none;
   margin: 0;
