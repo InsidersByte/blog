@@ -74,6 +74,5 @@ module.exports = {
     `gatsby-plugin-offline`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-feed',
   ],
 };
