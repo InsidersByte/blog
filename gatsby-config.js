@@ -10,14 +10,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-nprogress',
+      resolve: 'gatsby-plugin-typography',
       options: {
-        color: 'tomato',
-        showSpinner: false,
+        pathToConfigModule: `src/utils/typography.js`,
       },
     },
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-nprogress',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -39,6 +39,14 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
+          'gatsby-remark-emoji',
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_self',
+              rel: 'nofollow',
+            },
+          },
         ],
       },
     },

@@ -1,10 +1,12 @@
 // @flow
 
 import React from 'react';
-import Link from 'gatsby-link';
+import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-okaidia.css';
-import '../css/typography.css';
+import Header from '../components/Header';
+import config from '../../gatsby-config';
+import '../css/styles.css';
 
 type Props = {
   location: {
@@ -13,8 +15,18 @@ type Props = {
   children: Function,
 };
 
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+  padding-top: 0;
+`;
+
 const Template = ({ location, children }: Props) => {
-  const isRoot = location.pathname === '/';
+  // The root pathname when using github pages is /blog/
+  const isRoot =
+    location.pathname === config.pathPrefix ||
+    location.pathname.replace(/\/$/, '') === config.pathPrefix;
 
   return (
     <div>
@@ -25,42 +37,8 @@ const Template = ({ location, children }: Props) => {
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <div
-        style={{
-          background: `rebeccapurple`,
-          marginBottom: `1.45rem`,
-        }}
-      >
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`,
-          }}
-        >
-          <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
-            <Link
-              to="/"
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Insiders Byte
-            </Link>
-          </h1>
-        </div>
-      </div>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        {children()}
-      </div>
+      <Header isRoot={isRoot} />
+      <Container>{children()}</Container>
     </div>
   );
 };

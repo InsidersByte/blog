@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import GatsbyLink from 'gatsby-link';
-import Link from '../components/Link';
 
 declare var graphql: any;
 
@@ -28,7 +27,7 @@ type Props = {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 1rem 0.25rem;
   border-bottom: 2px solid #eee;
@@ -39,15 +38,17 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.25rem;
 `;
 
-const Date = styled.h2`
-  margin: 0 auto;
+const Subtitle = styled.h3`
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
-const CenteredLink = Link.extend`
-  margin: 0 auto;
+const Content = styled.p`
+  margin: 1rem 0;
 `;
 
 const Index = ({ data }: Props) => {
@@ -65,11 +66,11 @@ const Index = ({ data }: Props) => {
               </GatsbyLink>
             </Title>
 
-            <Date>{post.frontmatter.date}</Date>
+            <Subtitle>{post.frontmatter.date}</Subtitle>
 
-            <p>{post.excerpt}</p>
+            <Content>{post.excerpt}</Content>
 
-            <CenteredLink to={post.frontmatter.path}>Read more</CenteredLink>
+            <GatsbyLink to={post.frontmatter.path}>Read more</GatsbyLink>
           </Container>
         ))}
     </div>
