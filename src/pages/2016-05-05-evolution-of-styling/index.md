@@ -2,6 +2,7 @@
 path: "/evolution-of-styling"
 date: "2016-05-05T20:00:16.000Z"
 title: "Evolution of Styling"
+image: "./images/reason_300.5d19cfa6.png"
 tags: ["javascript","css"]
 ---
 

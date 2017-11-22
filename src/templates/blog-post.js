@@ -25,6 +25,13 @@ type Props = {
         rawDate: string,
         tags?: Array<string>,
         path: string,
+        image?: {
+          childImageSharp: {
+            resize: {
+              src: string,
+            },
+          },
+        },
       },
     },
   },
@@ -56,6 +63,10 @@ const Template = ({ data }: Props) => {
   const description = post.frontmatter.excerpt
     ? post.frontmatter.excerpt
     : post.excerpt;
+
+  const image = post.frontmatter.image
+    ? post.frontmatter.image.childImageSharp.resize.src
+    : null;
 
   const meta = [
     {
@@ -104,6 +115,17 @@ const Template = ({ data }: Props) => {
     },
   ];
 
+  if (image) {
+    meta.push({
+      name: 'og:image',
+      content: image,
+    });
+    meta.push({
+      name: 'twitter:image',
+      content: image,
+    });
+  }
+
   return (
     <div>
       <Helmet title={`${title} - ${post.frontmatter.title}`} meta={meta} />
@@ -148,6 +170,13 @@ export const pageQuery = graphql`
         path
         tags
         title
+        image {
+          childImageSharp {
+            resize(width: 1500, height: 1500) {
+              src
+            }
+          }
+        }
       }
     }
   }

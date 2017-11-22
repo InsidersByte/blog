@@ -2,6 +2,7 @@
 path: "/david-node-js-dependency-manager"
 date: "2016-04-24T20:14:48.000Z"
 title: "David - Node.js Dependency Manager"
+image: ./images/david-dm.png
 tags: ["node","npm","dependency-manager","badges","github"]
 ---
 
