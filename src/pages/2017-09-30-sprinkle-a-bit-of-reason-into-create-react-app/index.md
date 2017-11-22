@@ -5,7 +5,7 @@ title: "Sprinkle a bit of Reason into Create React App"
 tags: ["react","reason","create-react-app","ocaml","bucklescript"]
 ---
 
-![](https://reasonml.github.io/static/reason_300.5d19cfa6.png)
+![reason-logo](./images/reason_300.5d19cfa6.png)
 
 So you've decided to hop on the `Reason` hype train and you want to try it out
 in your app, the thing is you already have a big project using `Create React

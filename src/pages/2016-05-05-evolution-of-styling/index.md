@@ -5,7 +5,7 @@ title: "Evolution of Styling"
 tags: ["javascript","css"]
 ---
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/css-modules-logo-small.png)
+![](./images/css-modules-logo-small.png)
 
 # The Evolution of Styling in [React](https://facebook.github.io/) from CSS to CSS Modules and everywhere in between
 

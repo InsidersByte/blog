@@ -5,7 +5,7 @@
   "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
   "private": true,
   "dependencies": {
-    "gatsby": "1.9.118",
+    "gatsby": "1.9.119",
     "gatsby-link": "1.6.28",
     "gatsby-plugin-catch-links": "1.0.9",
     "gatsby-plugin-manifest": "1.0.8",
@@ -56,7 +56,7 @@
     "stylelint": "8.2.0",
     "stylelint-config-standard": "17.0.0",
     "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.0.0"
+    "stylelint-processor-styled-components": "1.1.0"
   },
   "scripts": {
     "precommit": "lint-staged",

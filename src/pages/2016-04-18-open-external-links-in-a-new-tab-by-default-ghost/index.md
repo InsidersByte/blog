@@ -65,17 +65,17 @@ theme, so no merging updates!
 
 Firstly login to the admin page and click the `Code Injection` tab.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/code_injection-1.png)
+![](./images/code_injection-1.png)
 
 Then copy the script into the `Blog Footer` section.
 
 > Remember to wrap the script in `<script></script>` tags.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/code_injection_footer.png)
+![](./images/code_injection_footer.png)
 
 Click save.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/save_button.png)
+![](./images/save_button.png)
 
 That's it!
 

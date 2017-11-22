@@ -5,7 +5,7 @@ title: "My Development Stack"
 tags: []
 ---
 
-![lego](https://insidersbyte.blob.core.windows.net/ghost/2017/09/lego.jpg)
+![lego](./images/lego.jpg)
 
 > This post is still a work in progress.
 

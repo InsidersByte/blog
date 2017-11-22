@@ -5,7 +5,7 @@ title: "README Badges"
 tags: ["github","badges","README"]
 ---
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Screen-Shot-2016-05-23-at-09-07-38.png)
+![](./images/Screen-Shot-2016-05-23-at-09-07-38.png)
 
 # Gotta catch 'em all
 
@@ -36,14 +36,14 @@ you can show off to everyone.
 
 ## What badges do I use?
 
-#### NPM Module Version - [![npm](https://img.shields.io/npm/v/react-markdown-renderer.svg)](https://www.npmjs.com/package/react-markdown-renderer" class="inline)
+#### NPM Module Version - [![npm](./images/react-markdown-renderer.svg)](https://www.npmjs.com/package/react-markdown-renderer" class="inline)
 
 This displays the current version number that is deployed on NPM. It saves
 anyone having to look in the package.json for the version number.
 
 > This links to the NPM package page.
 
-#### Build Status - [![Build Status](https://travis-ci.org/InsidersByte/react-markdown-renderer.svg)](https://travis-ci.org/InsidersByte/react-markdown-renderer" class="inline)
+#### Build Status - [![Build Status](./images/react-markdown-renderer-1.svg)](https://travis-ci.org/InsidersByte/react-markdown-renderer" class="inline)
 
 This displays the current build status from the continuous integration server.
 
@@ -55,33 +55,33 @@ This displays the coverage percentage of the tests.
 
 > This links to a more detailed view of the coverage.
 
-#### Code Climate - [![Code Climate](https://codeclimate.com/github/InsidersByte/react-markdown-renderer/badges/gpa.svg)](https://codeclimate.com/github/InsidersByte/react-markdown-renderer" class="inline)
+#### Code Climate - [![Code Climate](./images/gpa.svg)](https://codeclimate.com/github/InsidersByte/react-markdown-renderer" class="inline)
 
 This displays the [Code Climate](https://codeclimate.com/) score. The maximum
 possible score is 4.0.
 
 > This links to a more detailed view of the score.
 
-#### bitHound - [![bitHound Overall Score](https://www.bithound.io/github/InsidersByte/react-markdown-renderer/badges/score.svg)](https://www.bithound.io/github/InsidersByte/react-markdown-renderer" class="inline)
+#### bitHound - [![bitHound Overall Score](./images/score.svg)](https://www.bithound.io/github/InsidersByte/react-markdown-renderer" class="inline)
 
 This displays the [bitHound](https://www.bithound.io/) score. The maximum
 possible score is 100.
 
 > This links to a more detailed view of the score.
 
-#### Dependency Status - [![Dependency Status](https://david-dm.org/insidersbyte/react-markdown-renderer.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer" class="inline)
+#### Dependency Status - [![Dependency Status](./images/react-markdown-renderer-2.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer" class="inline)
 
 This displays the dependency status of the project. (If applicable).
 
 > This links to a more detailed view of the dependencies.
 
-#### Peer Dependency Status - [![peerDependency Status](https://david-dm.org/insidersbyte/react-markdown-renderer/peer-status.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer#info=peerDependencies" class="inline)
+#### Peer Dependency Status - [![peerDependency Status](./images/peer-status.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer#info=peerDependencies" class="inline)
 
 This displays the peer-dependency status of the project. (If applicable).
 
 > This links to a more detailed view of the peer-dependencies.
 
-#### Development Dependency Status - [![devDependency Status](https://david-dm.org/insidersbyte/react-markdown-renderer/dev-status.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer#info=devDependencies" class="inline)
+#### Development Dependency Status - [![devDependency Status](./images/dev-status.svg)](https://david-dm.org/insidersbyte/react-markdown-renderer#info=devDependencies" class="inline)
 
 This displays the dev-dependency status of the project. (If applicable).
 
