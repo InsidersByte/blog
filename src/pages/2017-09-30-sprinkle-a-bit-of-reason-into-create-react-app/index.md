@@ -2,10 +2,11 @@
 path: "/sprinkle-a-bit-of-reason-into-create-react-app"
 date: "2017-09-30T09:53:54.000Z"
 title: "Sprinkle a bit of Reason into Create React App"
+image: "./images/reason-logo.png"
 tags: ["react","reason","create-react-app","ocaml","bucklescript"]
 ---
 
-![reason-logo](./images/reason_300.5d19cfa6.png)
+![reason-logo](./images/reason-logo.png)
 
 So you've decided to hop on the `Reason` hype train and you want to try it out
 in your app, the thing is you already have a big project using `Create React

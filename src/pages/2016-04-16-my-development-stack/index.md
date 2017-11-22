@@ -2,6 +2,7 @@
 path: "/my-development-stack"
 date: "2016-04-16T07:17:13.000Z"
 title: "My Development Stack"
+image: ./images/lego.jpg
 tags: []
 ---
 

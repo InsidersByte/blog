@@ -2,6 +2,7 @@
 path: "/global-npm-packages-are-generally-bad-practice"
 date: "2016-10-27T19:41:00.000Z"
 title: "Global npm packages are (generally) bad practice"
+image: "./images/npm-logo.png"
 tags: ["npm","node","best-practices"]
 ---
 
