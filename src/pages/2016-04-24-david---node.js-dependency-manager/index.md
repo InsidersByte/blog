@@ -5,7 +5,7 @@ title: "David - Node.js Dependency Manager"
 tags: ["node","npm","dependency-manager","badges","github"]
 ---
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/david-dm.png)
+![](./images/david-dm.png)
 
 I recently started writing a (very) long post about
 [my current development stack](https://www.insidersbyte.com/my-development-stack/)
@@ -32,10 +32,10 @@ peer-dependencies and dev-dependencies, with their respective freshness.
 Here is the [status page for express](https://david-dm.org/expressjs/express).
 
 Here is the dependency badge for express.
-[![Dependency Status](https://david-dm.org/expressjs/express.svg)](https://david-dm.org/expressjs/express)
+[![Dependency Status](./images/express.svg)](https://david-dm.org/expressjs/express)
 
 Here is the dev-dependency badge for express.
-[![devDependency Status](https://david-dm.org/expressjs/express/dev-status.svg)](https://david-dm.org/expressjs/express#info=devDependencies)
+[![devDependency Status](./images/dev-status.svg)](https://david-dm.org/expressjs/express#info=devDependencies)
 
 # Why do I need this?
 
@@ -101,10 +101,10 @@ dependencies and at a glance you can see if your repository is up to date!
 There are three styles of badges that David can display.
 
 SVG (my default) `https://david-dm.org/username/repo.svg`
-[![Dependency Status](https://david-dm.org/InsidersByte/react-markdown-editor.svg)](https://david-dm.org/InsidersByte/react-markdown-editor)
+[![Dependency Status](./images/react-markdown-editor.svg)](https://david-dm.org/InsidersByte/react-markdown-editor)
 
 PNG `https://david-dm.org/username/repo.png`
-[![Dependency Status](https://david-dm.org/InsidersByte/react-markdown-editor.png)](https://david-dm.org/InsidersByte/react-markdown-editor)
+[![Dependency Status](./images/react-markdown-editor.png)](https://david-dm.org/InsidersByte/react-markdown-editor)
 
 Flat-Square `https://david-dm.org/username/repo.svg?style=flat-square`
-[![Dependency Status](https://david-dm.org/InsidersByte/react-markdown-editor.svg?style=flat-square)](https://david-dm.org/InsidersByte/react-markdown-editor)
+[![Dependency Status](./images/react-markdown-editor.svg?style=flat-square)](https://david-dm.org/InsidersByte/react-markdown-editor)

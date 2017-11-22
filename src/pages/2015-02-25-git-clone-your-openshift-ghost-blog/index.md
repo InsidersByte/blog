@@ -43,7 +43,7 @@ should be presented with a view similar to the image below (of course your name
 and domain will be different), all you need to do is click on your application
 (the arrow represents your application).
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Application_List-1457110905187.png)
+![](./images/Application_List-1457110905187.png)
 
 After clicking on the application you should be presented with a view similar to
 the image below. You need to copy the source code url as highlighted below (I
@@ -51,7 +51,7 @@ have removed the full url from my link and only included the starting part,
 yours will contain the full link), this is your repository url that I mentioned
 above.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Repository_Url-1457110913498.png)
+![](./images/Repository_Url-1457110913498.png)
 
 Now that you have your repository you have to open up command prompt and type in
 `git clone <repository_url> <directory to create>`.

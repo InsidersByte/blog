@@ -82,25 +82,25 @@ the same as your domain, so for instance the root record for this website is
 Now you need to add a new CNAME record for root where the 'is an alias of' field
 is set to the address of your blog, as per the image below.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Root_CNAME.png)
+![](./images/Root_CNAME.png)
 
 The last change we are going to make to our DNS is to add a CNAME record for
 `www.`. Again you need to set the 'is an alias of' field to the address of your
 blog, as per the image below.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/www_CNAME.png)
+![](./images/www_CNAME.png)
 
 Finally we are going to setup a redirect for all non www traffic to www. This is
 really simple with CloudFlare, you have to navigate to the Page Rules area for
 your website. It can be accessed by clicking the gear next to your website on
 the dashboard, as per the image below
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Page_Rules-1457110971956.png)
+![](./images/Page_Rules-1457110971956.png)
 
 Now you just have to add a new page rule as per the image below and it will
 redirect all non www traffic to www.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Page_Redirect-1457110982113.png)
+![](./images/Page_Redirect-1457110982113.png)
 
 The `*` in the URL pattern means any address so for instance
 `example.com/example` would get matched if you missed the \* only `example.com`
@@ -119,15 +119,15 @@ with CloudFlare it takes a lot less time and is normally done in a few minutes.
 series of steps. First logon to your OpenShift account and navigate to your
 Ghost application. Now click the change alias link.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Add_Alias-1457111016798.png)
+![](./images/Add_Alias-1457111016798.png)
 
 Now you need to click the add alias link.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Add_Alias_Button-1457110998116.png)
+![](./images/Add_Alias_Button-1457110998116.png)
 
 Now enter your domain name as shown below.
 
-![](https://insidersbyte.blob.core.windows.net/ghost/2017/09/Adding_Alias-1457111004521.png)
+![](./images/Adding_Alias-1457111004521.png)
 
 Click save and you are done.
 
