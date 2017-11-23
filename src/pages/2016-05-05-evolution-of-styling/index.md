@@ -6,8 +6,6 @@ image: "./images/css-modules-logo.png"
 tags: ["javascript","css"]
 ---
 
-![](./images/css-modules-logo-small.png)
-
 # The Evolution of Styling in [React](https://facebook.github.io/) from CSS to CSS Modules and everywhere in between
 
 I recently decided to look at the various different styling options that are

@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "gatsby": "1.9.119",
+    "gatsby-image": "1.0.24",
     "gatsby-link": "1.6.28",
     "gatsby-plugin-catch-links": "1.0.9",
     "gatsby-plugin-manifest": "1.0.8",
