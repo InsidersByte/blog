@@ -6,6 +6,8 @@ module.exports = {
     author: 'Insiders Byte',
     title: 'Insiders Byte',
     siteUrl: 'https://insidersbyte.github.io/blog',
+    twitterUrl: 'https://twitter.com/insidersbyte',
+    githubUrl: 'https://github.com/insidersbyte',
   },
   plugins: [
     'gatsby-plugin-react-next',
