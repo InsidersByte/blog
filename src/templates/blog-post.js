@@ -24,7 +24,6 @@ type Props = {
         date: string,
         rawDate: string,
         tags?: Array<string>,
-        path: string,
         image?: {
           childImageSharp: {
             resize: {
@@ -153,21 +152,20 @@ const Template = ({ data }: Props) => {
 export default Template;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query BlogPostByQuery($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
       excerpt
       frontmatter {
         date(formatString: "MMM D, YYYY")
         rawDate: date
-        path
         tags
         title
         image {
