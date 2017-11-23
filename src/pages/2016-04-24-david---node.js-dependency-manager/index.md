@@ -6,8 +6,6 @@ image: ./images/david-dm.png
 tags: ["node","npm","dependency-manager","badges","github"]
 ---
 
-![](./images/david-dm.png)
-
 I recently started writing a (very) long post about
 [my current development stack](https://www.insidersbyte.com/my-development-stack/)
 and I thought that I would write a few more in depth posts about some of the
