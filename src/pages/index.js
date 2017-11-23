@@ -2,12 +2,20 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import TwitterIcon from 'react-icons/lib/fa/twitter';
+import GithubIcon from 'react-icons/lib/fa/github';
 import GatsbyLink from 'gatsby-link';
 
 declare var graphql: any;
 
 type Props = {
   data: {
+    site: {
+      siteMetadata: {
+        twitterUrl: string,
+        githubUrl: string,
+      },
+    },
     allMarkdownRemark: {
       edges: Array<{
         node: {
@@ -24,17 +32,27 @@ type Props = {
   },
 };
 
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+`;
+
+const SocialIcon = styled.a`
+  margin-left: 0.5rem;
+  color: #999999;
+
+  :hover {
+    color: #333333;
+  }
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem 0.25rem;
-  border-bottom: 2px solid #eee;
-
-  :last-child {
-    border-bottom-width: 0;
-  }
 `;
 
 const Title = styled.h1`
@@ -51,36 +69,60 @@ const Content = styled.p`
   margin: 1rem 0;
 `;
 
-const Index = ({ data }: Props) => {
-  const { edges: posts } = data.allMarkdownRemark;
+const Index = ({
+  data: {
+    site: { siteMetadata: { twitterUrl, githubUrl } },
+    allMarkdownRemark: { edges: posts },
+  },
+}: Props) => (
+  <div>
+    <SocialIcons>
+      <SocialIcon href={twitterUrl}>
+        <TwitterIcon size={25} />
+      </SocialIcon>
 
-  return (
+      <SocialIcon href={githubUrl}>
+        <GithubIcon size={25} />
+      </SocialIcon>
+    </SocialIcons>
+
+    <hr />
+
     <div>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => (
-          <Container key={post.id}>
-            <Title>
-              <GatsbyLink to={post.frontmatter.path}>
-                {post.frontmatter.title}
-              </GatsbyLink>
-            </Title>
+        .map(({ node: post }, index) => (
+          <div>
+            <Container key={post.id}>
+              <Title>
+                <GatsbyLink to={post.frontmatter.path}>
+                  {post.frontmatter.title}
+                </GatsbyLink>
+              </Title>
 
-            <Subtitle>{post.frontmatter.date}</Subtitle>
+              <Subtitle>{post.frontmatter.date}</Subtitle>
 
-            <Content>{post.excerpt}</Content>
+              <Content>{post.excerpt}</Content>
 
-            <GatsbyLink to={post.frontmatter.path}>Read more</GatsbyLink>
-          </Container>
+              <GatsbyLink to={post.frontmatter.path}>Read more</GatsbyLink>
+            </Container>
+            {index < posts.length - 1 && <hr />}
+          </div>
         ))}
     </div>
-  );
-};
+  </div>
+);
 
 export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        twitterUrl
+        githubUrl
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

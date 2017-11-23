@@ -32,7 +32,7 @@ const Tag = ({ pathContext: { post, tag } }: Props) => (
 
         <p>{excerpt}</p>
 
-        {index !== post.length - 1 && <hr />}
+        {index < post.length - 1 && <hr />}
       </div>
     ))}
   </div>
