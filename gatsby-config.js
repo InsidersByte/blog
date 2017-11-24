@@ -8,6 +8,8 @@ module.exports = {
     description:
       'The blog of the London, UK based software engineer Jonathon Kelly',
     siteUrl: 'https://insidersbyte.github.io/blog',
+    twitterUrl: 'https://twitter.com/insidersbyte',
+    githubUrl: 'https://github.com/insidersbyte',
   },
   plugins: [
     'gatsby-plugin-react-next',
@@ -35,6 +37,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
+              maxWidth: 786,
               linkImagesToOriginal: false,
             },
           },

@@ -6,8 +6,6 @@ image: ./images/lego.jpg
 tags: []
 ---
 
-![lego](./images/lego.jpg)
-
 > This post is still a work in progress.
 
 I am always looking to improve and keep my development stack up to date, over

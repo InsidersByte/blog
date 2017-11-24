@@ -6,8 +6,6 @@ image: "./images/reason-logo.png"
 tags: ["react","reason","create-react-app","ocaml","bucklescript"]
 ---
 
-![reason-logo](./images/reason-logo.png)
-
 So you've decided to hop on the `Reason` hype train and you want to try it out
 in your app, the thing is you already have a big project using `Create React
 App` and don't want to have to rewrite it from scratch or eject and have to

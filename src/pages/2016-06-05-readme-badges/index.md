@@ -6,8 +6,6 @@ image: "./images/Screen-Shot-2016-05-23-at-09-07-38.png"
 tags: ["github","badges","README"]
 ---
 
-![](./images/Screen-Shot-2016-05-23-at-09-07-38.png)
-
 # Gotta catch 'em all
 
 > Yes I am a millennial and I grew up with Pokémon.

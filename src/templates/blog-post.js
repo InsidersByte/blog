@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
 import Tags from '../components/Tags';
 
 declare var graphql: any;
@@ -23,14 +24,17 @@ type Props = {
         title: string,
         date: string,
         rawDate: string,
-        tags?: Array<string>,
         image?: {
           childImageSharp: {
             resize: {
               src: string,
             },
+            sizes: {},
           },
         },
+        imageAuthor: string,
+        imageAuthorLink: string,
+        tags?: Array<string>,
       },
     },
   },
@@ -47,6 +51,10 @@ const Title = styled.h1`
 const Subtitle = styled.h3`
   color: #555;
   margin: 0;
+`;
+
+const Image = styled.div`
+  margin-bottom: 3rem;
 `;
 
 const Footer = styled.div`
@@ -136,6 +144,21 @@ const Template = ({ data }: Props) => {
           </Subtitle>
         </Header>
 
+        {post.frontmatter.image && (
+          <Image>
+            <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
+            {post.frontmatter.imageAuthor &&
+              post.frontmatter.imageAuthorLink && (
+                <em>
+                  Image by{` `}
+                  <a href={post.frontmatter.imageAuthorLink}>
+                    {post.frontmatter.imageAuthorLink}
+                  </a>
+                </em>
+              )}
+          </Image>
+        )}
+
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         {post.frontmatter.tags &&
@@ -172,6 +195,13 @@ export const pageQuery = graphql`
           childImageSharp {
             resize(width: 1500, height: 1500) {
               src
+            }
+            sizes(quality: 100) {
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
         }
