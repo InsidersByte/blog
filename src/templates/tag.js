@@ -5,36 +5,39 @@ import GatsbyLink from 'gatsby-link';
 
 type Props = {
   pathContext: {
-    posts: {},
-    post: [
+    posts: [
       {
         id: string,
+        excerpt: string,
+        fields: {
+          slug: string,
+        },
         frontmatter: {
-          path: string,
           title: string,
         },
-        excerpt: string,
       },
     ],
     tag: string,
   },
 };
 
-const Tag = ({ pathContext: { post, tag } }: Props) => (
+const Tag = ({ pathContext: { posts, tag } }: Props) => (
   <div>
     <h1>Tagged with {tag}</h1>
 
-    {post.map(({ id, frontmatter, excerpt }, index) => (
-      <div key={id}>
-        <h1>
-          <GatsbyLink to={frontmatter.path}>{frontmatter.title}</GatsbyLink>
-        </h1>
+    {posts.map(
+      ({ id, excerpt, fields: { slug }, frontmatter: { title } }, index) => (
+        <div key={id}>
+          <h1>
+            <GatsbyLink to={slug}>{title}</GatsbyLink>
+          </h1>
 
-        <p>{excerpt}</p>
+          <p>{excerpt}</p>
 
-        {index < post.length - 1 && <hr />}
-      </div>
-    ))}
+          {index < posts.length - 1 && <hr />}
+        </div>
+      )
+    )}
   </div>
 );
 

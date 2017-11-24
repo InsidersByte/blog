@@ -3,28 +3,27 @@ const path = require('path');
 
 const createTagPages = (createPage, edges) => {
   const tagTemplate = path.resolve(`src/templates/tag.js`);
-  const posts = {};
+  const tags = {};
 
   edges.forEach(({ node }) => {
     if (node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
-        if (!posts[tag]) {
-          posts[tag] = [];
+        if (!tags[tag]) {
+          tags[tag] = [];
         }
-        posts[tag].push(node);
+        tags[tag].push(node);
       });
     }
   });
 
-  Object.keys(posts).forEach(tagName => {
-    const post = posts[tagName];
+  Object.keys(tags).forEach(tagName => {
+    const posts = tags[tagName];
 
     createPage({
       path: `/tags/${tagName}`,
       component: tagTemplate,
       context: {
         posts,
-        post,
         tag: tagName,
       },
     });
