@@ -31,6 +31,7 @@
     "gatsby-transformer-remark": "1.7.21",
     "gatsby-transformer-sharp": "1.6.14",
     "prismjs": "1.8.4",
+    "raven-js": "3.20.1",
     "react": "16.1.1",
     "react-dom": "16.1.1",
     "react-helmet": "5.2.0",
@@ -70,7 +71,7 @@
     "deploy": "gh-pages -d public",
     "lint:css": "stylelint './src/**/*.js'",
     "lint:js": "eslint --ignore-path .gitignore --ignore-pattern flow-typed .",
-    "lint": "yarn run lint:css && yarnr run lint:js",
+    "lint": "yarn run lint:css && yarn run lint:js",
     "test": "jest --env=jsdom --watch",
     "format":
       "prettier --write \"*.{js,json,css,md}\" \"**/*.{js,json,css,md}\""
