@@ -42,10 +42,10 @@ const SocialIcons = styled.div`
 
 const SocialIcon = styled.a`
   margin-left: 0.5rem;
-  color: #999999;
+  color: #999;
 
   :hover {
-    color: #333333;
+    color: #333;
   }
 `;
 
@@ -94,8 +94,8 @@ const Index = ({
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }, index) => (
-          <div>
-            <Container key={post.id}>
+          <div key={post.id}>
+            <Container>
               <Title>
                 <GatsbyLink to={post.fields.slug}>
                   {post.frontmatter.title}
@@ -108,6 +108,7 @@ const Index = ({
 
               <GatsbyLink to={post.fields.slug}>Read more</GatsbyLink>
             </Container>
+
             {index < posts.length - 1 && <hr />}
           </div>
         ))}
