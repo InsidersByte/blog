@@ -21,10 +21,12 @@ type Props = {
         node: {
           id: string,
           excerpt: string,
+          fields: {
+            slug: string,
+          },
           frontmatter: {
             title: string,
             date: string,
-            path: string,
           },
         },
       }>,
@@ -95,7 +97,7 @@ const Index = ({
           <div>
             <Container key={post.id}>
               <Title>
-                <GatsbyLink to={post.frontmatter.path}>
+                <GatsbyLink to={post.fields.slug}>
                   {post.frontmatter.title}
                 </GatsbyLink>
               </Title>
@@ -104,7 +106,7 @@ const Index = ({
 
               <Content>{post.excerpt}</Content>
 
-              <GatsbyLink to={post.frontmatter.path}>Read more</GatsbyLink>
+              <GatsbyLink to={post.fields.slug}>Read more</GatsbyLink>
             </Container>
             {index < posts.length - 1 && <hr />}
           </div>
@@ -128,10 +130,12 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 250)
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "MMM D, YYYY")
-            path
           }
         }
       }

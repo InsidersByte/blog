@@ -15,6 +15,7 @@ type Props = {
     site: {
       siteMetadata: {
         title: string,
+        description: string,
       },
     },
   },
@@ -32,7 +33,7 @@ const Container = styled.div`
 `;
 
 const Template = ({
-  data: { site: { siteMetadata: { title } } },
+  data: { site: { siteMetadata: { title, description } } },
   location,
   children,
 }: Props) => {
@@ -48,8 +49,7 @@ const Template = ({
         meta={[
           {
             name: 'description',
-            content:
-              'The blog of the London, UK based software engineer Jonathon Kelly',
+            content: description,
           },
           {
             name: 'keywords',
@@ -70,6 +70,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }

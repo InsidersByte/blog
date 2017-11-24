@@ -5,6 +5,8 @@ module.exports = {
   siteMetadata: {
     author: 'Insiders Byte',
     title: 'Insiders Byte',
+    description:
+      'The blog of the London, UK based software engineer Jonathon Kelly',
     siteUrl: 'https://insidersbyte.github.io/blog',
     twitterUrl: 'https://twitter.com/insidersbyte',
     githubUrl: 'https://github.com/insidersbyte',
@@ -77,5 +79,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-feed',
   ],
 };
