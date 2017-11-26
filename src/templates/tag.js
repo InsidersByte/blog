@@ -2,47 +2,40 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
+import Posts from '../components/Posts';
 
 type Props = {
   pathContext: {
-    posts: [
-      {
-        id: string,
-        excerpt: string,
-        fields: {
-          slug: string,
-        },
-        frontmatter: {
-          title: string,
-        },
+    posts: Array<{
+      id: string,
+      excerpt: string,
+      fields: {
+        slug: string,
       },
-    ],
+      frontmatter: {
+        title: string,
+        date: string,
+      },
+    }>,
     tag: string,
   },
 };
 
 const Root = styled.div`
-  max-width: 1200px;
+  max-width: 700px;
+`;
+
+const Title = styled.h1`
+  margin: 0 0 1rem;
 `;
 
 const Tag = ({ pathContext: { posts, tag } }: Props) => (
   <Root>
-    <h1>Tagged with {tag}</h1>
+    <Title>Tagged with {tag}</Title>
 
-    {posts.map(
-      ({ id, excerpt, fields: { slug }, frontmatter: { title } }, index) => (
-        <div key={id}>
-          <h1>
-            <GatsbyLink to={slug}>{title}</GatsbyLink>
-          </h1>
+    <hr />
 
-          <p>{excerpt}</p>
-
-          {index < posts.length - 1 && <hr />}
-        </div>
-      )
-    )}
+    <Posts posts={posts} />
   </Root>
 );
 

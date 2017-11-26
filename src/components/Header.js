@@ -11,12 +11,9 @@ type Props = {
 
 const Root = styled.div`
   background: #663698;
-  margin-bottom: 1.45rem;
 `;
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
   padding: ${props => (props.isRoot ? '1.45rem 1.0875rem' : '1rem 0.75rem')};
 `;
 

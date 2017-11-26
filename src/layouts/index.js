@@ -40,8 +40,7 @@ type Props = {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 1.0875rem 1.45rem;
-  padding-top: 0;
+  padding: 1.45rem 1.0875rem 1.45rem;
 `;
 
 const Template = ({
