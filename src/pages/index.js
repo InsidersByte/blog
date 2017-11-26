@@ -4,8 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
-import Link from 'gatsby-link';
-import Img from 'gatsby-image';
 import Posts from '../components/Posts';
 
 declare var graphql: any;
@@ -37,7 +35,9 @@ type Props = {
 };
 
 const Root = styled.div`
-  max-width: 700px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem 1.45rem;
 `;
 
 const SocialIcons = styled.div`
@@ -91,7 +91,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 250)
           id
           fields {
             slug

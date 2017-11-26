@@ -22,7 +22,9 @@ type Props = {
 };
 
 const Root = styled.div`
-  max-width: 700px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem 1.45rem;
 `;
 
 const Title = styled.h1`

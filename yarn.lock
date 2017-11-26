@@ -2954,6 +2954,13 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+dir-glob@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"
+  dependencies:
+    arrify "^1.0.1"
+    path-type "^3.0.0"
+
 discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
@@ -3059,7 +3066,7 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
-dot-prop@^4.1.0:
+dot-prop@^4.1.0, dot-prop@^4.1.1:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
   dependencies:
@@ -3378,9 +3385,9 @@ eslint-config-airbnb@16.1.0:
   dependencies:
     eslint-config-airbnb-base "^12.1.0"
 
-eslint-config-prettier@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.8.0.tgz#929861a11de0249677686eba908118175d1a26bc"
+eslint-config-prettier@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.9.0.tgz#5ecd65174d486c22dff389fe036febf502d468a3"
   dependencies:
     get-stdin "^5.0.1"
 
@@ -4804,6 +4811,17 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+globby@^7.0.0:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-7.1.1.tgz#fb2ccff9401f8600945dfada97440cca972b8680"
+  dependencies:
+    array-union "^1.0.1"
+    dir-glob "^2.0.0"
+    glob "^7.1.2"
+    ignore "^3.3.5"
+    pify "^3.0.0"
+    slash "^1.0.0"
+
 globjoin@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/globjoin/-/globjoin-0.1.4.tgz#2f4494ac8919e3767c5cbb691e9f463324285d43"
@@ -5220,7 +5238,7 @@ html-void-elements@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.2.tgz#9d22e0ca32acc95b3f45b8d5b4f6fbdc05affd55"
 
-htmlparser2@^3.9.0, htmlparser2@^3.9.1:
+htmlparser2@^3.9.0, htmlparser2@^3.9.1, htmlparser2@^3.9.2:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.9.2.tgz#1bdf87acca0f3f9e53fa4fcceb0f4b4cbb00b338"
   dependencies:
@@ -5309,7 +5327,7 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-ignore@^3.3.3:
+ignore@^3.3.3, ignore@^3.3.5:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
@@ -8081,7 +8099,7 @@ path-to-regexp@^1.0.1, path-to-regexp@^1.7.0:
   dependencies:
     isarray "0.0.1"
 
-path-type@3.0.0:
+path-type@3.0.0, path-type@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
   dependencies:
@@ -8429,6 +8447,14 @@ postcss-font-variant@^2.0.0:
   dependencies:
     postcss "^5.0.4"
 
+postcss-html@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/postcss-html/-/postcss-html-0.11.0.tgz#03a3ff3116f8a0fe0d46316ea21893d4db4b63af"
+  dependencies:
+    htmlparser2 "^3.9.2"
+    remark "^8.0.0"
+    unist-util-find-all-after "^1.0.1"
+
 postcss-image-set-polyfill@^0.3.3:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/postcss-image-set-polyfill/-/postcss-image-set-polyfill-0.3.5.tgz#0f193413700cf1f82bd39066ef016d65a4a18181"
@@ -8691,11 +8717,19 @@ postcss-selector-parser@^1.1.4:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-selector-parser@^2.0.0, postcss-selector-parser@^2.2.0, postcss-selector-parser@^2.2.2, postcss-selector-parser@^2.2.3:
+postcss-selector-parser@^2.0.0, postcss-selector-parser@^2.2.0, postcss-selector-parser@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-2.2.3.tgz#f9437788606c3c9acee16ffe8d8b16297f27bb90"
   dependencies:
     flatten "^1.0.2"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-selector-parser@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz#4f875f4afb0c96573d5cf4d74011aee250a7e865"
+  dependencies:
+    dot-prop "^4.1.1"
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
@@ -9011,6 +9045,10 @@ rc@^1.1.2, rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-aux@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-aux/-/react-aux-1.1.0.tgz#777d036dab3a917ed27e9d3697f6f0ce090c5ab4"
 
 react-deep-force-update@^2.0.1:
   version "2.1.1"
@@ -9525,6 +9563,14 @@ remark@^7.0.1:
   dependencies:
     remark-parse "^3.0.0"
     remark-stringify "^3.0.0"
+    unified "^6.0.0"
+
+remark@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/remark/-/remark-8.0.0.tgz#287b6df2fe1190e263c1d15e486d3fa835594d6d"
+  dependencies:
+    remark-parse "^4.0.0"
+    remark-stringify "^4.0.0"
     unified "^6.0.0"
 
 remote-redux-devtools@^0.5.7:
@@ -10725,15 +10771,15 @@ styled-components@2.2.3:
     stylis "3.x"
     supports-color "^3.2.3"
 
-stylelint-config-recommended@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-1.0.0.tgz#752c17fc68fa64cd5e7589e24f6e46e77e14a735"
+stylelint-config-recommended@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-2.0.0.tgz#560a028e81ea3ca8894b9a8eef4c0e05ac60e090"
 
-stylelint-config-standard@17.0.0:
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-17.0.0.tgz#42103a090054ee2a3dde9ecaed55e5d4d9d059fc"
+stylelint-config-standard@18.0.0:
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-18.0.0.tgz#0d872b40fafdcddcf4188fb5b64ddb3887e8aefc"
   dependencies:
-    stylelint-config-recommended "^1.0.0"
+    stylelint-config-recommended "^2.0.0"
 
 stylelint-config-styled-components@0.1.1:
   version "0.1.1"
@@ -10748,9 +10794,9 @@ stylelint-processor-styled-components@1.1.1:
     postcss "^6.0.14"
     typescript-eslint-parser "^9.0.0"
 
-stylelint@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-8.2.0.tgz#6a15044553fb5c3143b16d62013a370314495b0d"
+stylelint@8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-8.3.0.tgz#aa4f0c6d9ca7f24e7fc62331934dcd71c6317453"
   dependencies:
     autoprefixer "^7.1.2"
     balanced-match "^1.0.0"
@@ -10760,7 +10806,7 @@ stylelint@8.2.0:
     execall "^1.0.0"
     file-entry-cache "^2.0.0"
     get-stdin "^5.0.1"
-    globby "^6.1.0"
+    globby "^7.0.0"
     globjoin "^0.1.4"
     html-tags "^2.0.0"
     ignore "^3.3.3"
@@ -10774,13 +10820,14 @@ stylelint@8.2.0:
     normalize-selector "^0.2.0"
     pify "^3.0.0"
     postcss "^6.0.6"
+    postcss-html "^0.11.0"
     postcss-less "^1.1.0"
     postcss-media-query-parser "^0.2.3"
     postcss-reporter "^5.0.0"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-safe-parser "^3.0.1"
     postcss-scss "^1.0.2"
-    postcss-selector-parser "^2.2.3"
+    postcss-selector-parser "^3.1.0"
     postcss-value-parser "^3.3.0"
     resolve-from "^4.0.0"
     specificity "^0.3.1"
@@ -11370,6 +11417,12 @@ unist-builder@^1.0.1:
   resolved "https://registry.yarnpkg.com/unist-builder/-/unist-builder-1.0.2.tgz#8c3b9903ef64bcfb117dd7cf6a5d98fc1b3b27b6"
   dependencies:
     object-assign "^4.1.0"
+
+unist-util-find-all-after@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unist-util-find-all-after/-/unist-util-find-all-after-1.0.1.tgz#4e5512abfef7e0616781aecf7b1ed751c00af908"
+  dependencies:
+    unist-util-is "^2.0.0"
 
 unist-util-generated@^1.1.0:
   version "1.1.1"

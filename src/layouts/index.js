@@ -2,8 +2,8 @@
 
 import React from 'react';
 import raven from 'raven-js';
-import styled from 'styled-components';
 import Helmet from 'react-helmet';
+import Aux from 'react-aux';
 import 'prismjs/themes/prism-okaidia.css';
 import Header from '../components/Header';
 import config from '../../gatsby-config';
@@ -37,12 +37,6 @@ type Props = {
   children: Function,
 };
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 1.45rem 1.0875rem 1.45rem;
-`;
-
 const Template = ({
   data: { site: { siteMetadata: { title, description } } },
   location,
@@ -54,7 +48,7 @@ const Template = ({
     location.pathname.replace(/\/$/, '') === config.pathPrefix;
 
   return (
-    <div>
+    <Aux>
       <Helmet
         title={`${title} - Blog`}
         meta={[
@@ -69,8 +63,8 @@ const Template = ({
         ]}
       />
       <Header isRoot={isRoot} title={title} />
-      <Container>{children()}</Container>
-    </div>
+      {children()}
+    </Aux>
   );
 };
 
