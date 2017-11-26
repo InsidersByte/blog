@@ -38,8 +38,8 @@ type Props = {
 };
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
+  display: flex;
+  justify-content: center;
   padding: 0 1.0875rem 1.45rem;
   padding-top: 0;
 `;
@@ -69,7 +69,7 @@ const Template = ({
           },
         ]}
       />
-      <Header isRoot={isRoot} />
+      <Header isRoot={isRoot} title={title} />
       <Container>{children()}</Container>
     </div>
   );

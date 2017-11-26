@@ -3,8 +3,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
   pathPrefix: isProduction ? `/blog` : `/`,
   siteMetadata: {
-    author: 'Insiders Byte',
-    title: 'Insiders Byte',
+    author: 'InsidersByte',
+    title: 'InsidersByte',
     description:
       'The blog of the London, UK based software engineer Jonathon Kelly',
     siteUrl: 'https://insidersbyte.github.io/blog',
@@ -61,8 +61,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Insiders Byte',
-        short_name: 'Insiders Byte',
+        name: 'InsidersByte',
+        short_name: 'InsidersByte',
         start_url: '/',
         background_color: '#f7f0eb',
         theme_color: '#663698',

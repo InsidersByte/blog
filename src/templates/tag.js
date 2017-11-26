@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import styled from 'styled-components';
 import GatsbyLink from 'gatsby-link';
 
 type Props = {
@@ -21,8 +22,12 @@ type Props = {
   },
 };
 
+const Root = styled.div`
+  max-width: 1200px;
+`;
+
 const Tag = ({ pathContext: { posts, tag } }: Props) => (
-  <div>
+  <Root>
     <h1>Tagged with {tag}</h1>
 
     {posts.map(
@@ -38,7 +43,7 @@ const Tag = ({ pathContext: { posts, tag } }: Props) => (
         </div>
       )
     )}
-  </div>
+  </Root>
 );
 
 export default Tag;

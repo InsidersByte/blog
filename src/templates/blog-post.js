@@ -40,6 +40,10 @@ type Props = {
   },
 };
 
+const Root = styled.div`
+  max-width: 48em;
+`;
+
 const Header = styled.div`
   margin: 2rem 0 3rem;
 `;
@@ -136,7 +140,8 @@ const Template = ({ data }: Props) => {
   return (
     <div>
       <Helmet title={`${title} - ${post.frontmatter.title}`} meta={meta} />
-      <div>
+
+      <Root>
         <Header>
           <Title>{post.frontmatter.title}</Title>
           <Subtitle>
@@ -167,7 +172,7 @@ const Template = ({ data }: Props) => {
               <Tags tags={post.frontmatter.tags} />
             </Footer>
           )}
-      </div>
+      </Root>
     </div>
   );
 };

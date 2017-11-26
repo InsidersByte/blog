@@ -6,6 +6,7 @@ import Link from 'gatsby-link';
 
 type Props = {
   isRoot: boolean,
+  title: string,
 };
 
 const Root = styled.div`
@@ -29,11 +30,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Header = ({ isRoot }: Props) => (
+const Header = ({ isRoot, title }: Props) => (
   <Root>
     <Container isRoot={isRoot}>
       <Title isRoot={isRoot}>
-        <StyledLink to="/">Insiders Byte</StyledLink>
+        <StyledLink to="/">{title}</StyledLink>
       </Title>
     </Container>
   </Root>
