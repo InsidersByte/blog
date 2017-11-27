@@ -41,32 +41,25 @@ const Template = ({
   data: { site: { siteMetadata: { title, description } } },
   location,
   children,
-}: Props) => {
-  // The root pathname when using github pages is /blog/
-  const isRoot =
-    location.pathname === config.pathPrefix ||
-    location.pathname.replace(/\/$/, '') === config.pathPrefix;
-
-  return (
-    <Aux>
-      <Helmet
-        title={`${title} - Blog`}
-        meta={[
-          {
-            name: 'description',
-            content: description,
-          },
-          {
-            name: 'keywords',
-            content: 'developer, javascript, programming, react, node, reason',
-          },
-        ]}
-      />
-      <Header isRoot={isRoot} title={title} />
-      {children()}
-    </Aux>
-  );
-};
+}: Props) => (
+  <Aux>
+    <Helmet
+      title={`${title} - Blog`}
+      meta={[
+        {
+          name: 'description',
+          content: description,
+        },
+        {
+          name: 'keywords',
+          content: 'developer, javascript, programming, react, node, reason',
+        },
+      ]}
+    />
+    <Header title={title} />
+    {children()}
+  </Aux>
+);
 
 export default Template;
 

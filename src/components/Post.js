@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
+import Link from 'gatsby-link';
 
 type Props = {
   post: {
@@ -42,7 +42,7 @@ const Time = styled.h3`
 const Post = ({ post }: Props) => (
   <Root>
     <Title>
-      <GatsbyLink to={post.fields.slug}>{post.frontmatter.title}</GatsbyLink>
+      <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     </Title>
 
     <Extract>{post.excerpt}</Extract>

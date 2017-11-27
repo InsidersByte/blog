@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 type Props = {
-  isRoot: boolean,
   title: string,
 };
 
@@ -14,12 +13,12 @@ const Root = styled.div`
 `;
 
 const Container = styled.div`
-  padding: ${props => (props.isRoot ? '1.45rem 1.0875rem' : '1rem 0.75rem')};
+  padding: 1rem 0.75rem;
 `;
 
 const Title = styled.h1`
   margin: 0;
-  font-size: ${props => (props.isRoot ? '2.5rem' : '2rem')};
+  font-size: 2rem;
 `;
 
 const StyledLink = styled(Link)`
@@ -27,10 +26,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Header = ({ isRoot, title }: Props) => (
+const Header = ({ title }: Props) => (
   <Root>
-    <Container isRoot={isRoot}>
-      <Title isRoot={isRoot}>
+    <Container>
+      <Title>
         <StyledLink to="/">{title}</StyledLink>
       </Title>
     </Container>
