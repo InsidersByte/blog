@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
+import Aux from 'react-aux';
 import Tags from '../components/Tags';
 
 declare var graphql: any;
@@ -40,8 +41,14 @@ type Props = {
   },
 };
 
+const Root = styled.div`
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem 1.45rem;
+`;
+
 const Header = styled.div`
-  margin: 2rem 0 3rem;
+  margin: 1rem 0 3rem;
 `;
 
 const Title = styled.h1`
@@ -134,9 +141,10 @@ const Template = ({ data }: Props) => {
   }
 
   return (
-    <div>
+    <Aux>
       <Helmet title={`${title} - ${post.frontmatter.title}`} meta={meta} />
-      <div>
+
+      <Root>
         <Header>
           <Title>{post.frontmatter.title}</Title>
           <Subtitle>
@@ -167,8 +175,8 @@ const Template = ({ data }: Props) => {
               <Tags tags={post.frontmatter.tags} />
             </Footer>
           )}
-      </div>
-    </div>
+      </Root>
+    </Aux>
   );
 };
 

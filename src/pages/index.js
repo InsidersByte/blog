@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
-import GatsbyLink from 'gatsby-link';
+import Posts from '../components/Posts';
 
 declare var graphql: any;
 
@@ -34,6 +34,12 @@ type Props = {
   },
 };
 
+const Root = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem 1.45rem;
+`;
+
 const SocialIcons = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -49,35 +55,13 @@ const SocialIcon = styled.a`
   }
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0.25rem;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 0.25rem;
-`;
-
-const Subtitle = styled.h3`
-  margin-top: 0;
-  margin-bottom: 0;
-`;
-
-const Content = styled.p`
-  margin: 1rem 0;
-`;
-
 const Index = ({
   data: {
     site: { siteMetadata: { twitterUrl, githubUrl } },
     allMarkdownRemark: { edges: posts },
   },
 }: Props) => (
-  <div>
+  <Root>
     <SocialIcons>
       <SocialIcon href={twitterUrl}>
         <TwitterIcon size={25} />
@@ -90,30 +74,8 @@ const Index = ({
 
     <hr />
 
-    <div>
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }, index) => (
-          <div key={post.id}>
-            <Container>
-              <Title>
-                <GatsbyLink to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </GatsbyLink>
-              </Title>
-
-              <Subtitle>{post.frontmatter.date}</Subtitle>
-
-              <Content>{post.excerpt}</Content>
-
-              <GatsbyLink to={post.fields.slug}>Read more</GatsbyLink>
-            </Container>
-
-            {index < posts.length - 1 && <hr />}
-          </div>
-        ))}
-    </div>
-  </div>
+    <Posts posts={posts.map(o => o.node)} />
+  </Root>
 );
 
 export default Index;
