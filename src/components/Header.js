@@ -23,7 +23,6 @@ const Title = styled.h1`
 
 const StyledLink = styled(Link)`
   color: white;
-  text-decoration: none;
 `;
 
 const Header = ({ title }: Props) => (

@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GatsbyLink from 'gatsby-link';
+import paramCase from 'param-case';
 
 type Props = {
   tags: Array<string>,
@@ -51,7 +52,7 @@ const Tags = ({ tags = [] }: Props) => {
     <List>
       {tags.map(tag => (
         <ListItem key={tag}>
-          <StyledLink to={`/tags/${tag}`}>{tag}</StyledLink>
+          <StyledLink to={`/tags/${paramCase(tag)}/`}>{tag}</StyledLink>
         </ListItem>
       ))}
     </List>

@@ -1,41 +1,17 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const paramCase = require('param-case');
 const path = require('path');
-
-const createTagPages = (createPage, edges) => {
-  const tagTemplate = path.resolve(`src/templates/tag.js`);
-  const tags = {};
-
-  edges.forEach(({ node }) => {
-    if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach(tag => {
-        if (!tags[tag]) {
-          tags[tag] = [];
-        }
-        tags[tag].push(node);
-      });
-    }
-  });
-
-  Object.keys(tags).forEach(tagName => {
-    const posts = tags[tagName];
-
-    createPage({
-      path: `/tags/${tagName}`,
-      component: tagTemplate,
-      context: {
-        posts,
-        tag: tagName,
-      },
-    });
-  });
-};
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
+
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = node.frontmatter.path
-      ? node.frontmatter.path
-      : createFilePath({ node, getNode, basePath: `pages` });
+    const slug = node.frontmatter.slug
+      ? `/${paramCase(node.frontmatter.slug)}/`
+      : `/${
+          createFilePath({ node, getNode, basePath: `pages` }).split('---')[1]
+        }`;
+
     createNodeField({
       node,
       name: `slug`,
@@ -48,11 +24,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const tagTemplate = path.resolve(`src/templates/tag.js`);
 
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { draft: { ne: true } } }
         limit: 1000
       ) {
         edges {
@@ -78,11 +55,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
-
-    createTagPages(createPage, posts);
-
-    posts.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: blogPostTemplate,
@@ -92,6 +65,26 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
     });
 
-    return posts;
+    const tags = new Set();
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      if (node.frontmatter.tags) {
+        node.frontmatter.tags.forEach(tag => {
+          tags.add(tag);
+        });
+      }
+    });
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${paramCase(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
+        },
+      });
+    });
+
+    return Promise.resolve();
   });
 };
