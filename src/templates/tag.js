@@ -4,19 +4,27 @@ import React from 'react';
 import styled from 'styled-components';
 import Posts from '../components/Posts';
 
+declare var graphql: any;
+
 type Props = {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<{
+        node: {
+          id: string,
+          excerpt: string,
+          fields: {
+            slug: string,
+          },
+          frontmatter: {
+            title: string,
+            date: string,
+          },
+        },
+      }>,
+    },
+  },
   pathContext: {
-    posts: Array<{
-      id: string,
-      excerpt: string,
-      fields: {
-        slug: string,
-      },
-      frontmatter: {
-        title: string,
-        date: string,
-      },
-    }>,
     tag: string,
   },
 };
@@ -31,14 +39,41 @@ const Title = styled.h1`
   margin: 0 0 1rem;
 `;
 
-const Tag = ({ pathContext: { posts, tag } }: Props) => (
+const Tag = ({
+  data: { allMarkdownRemark: { edges: posts } },
+  pathContext: { tag },
+}: Props) => (
   <Root>
-    <Title>Tagged with {tag}</Title>
+    <Title>Tagged with &quot;{tag}&quot;</Title>
 
     <hr />
 
-    <Posts posts={posts} />
+    <Posts posts={posts.map(o => o.node)} />
   </Root>
 );
 
 export default Tag;
+
+export const pageQuery = graphql`
+  query TagPage($tag: String) {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] }, draft: { ne: true } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMM D, YYYY")
+          }
+        }
+      }
+    }
+  }
+`;

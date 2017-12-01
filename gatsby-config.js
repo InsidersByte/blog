@@ -1,7 +1,4 @@
-const isProduction = process.env.NODE_ENV === 'production';
-
 module.exports = {
-  pathPrefix: isProduction ? `/blog` : `/`,
   siteMetadata: {
     author: 'InsidersByte',
     title: 'InsidersByte',
@@ -80,5 +77,6 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-plugin-feed',
+    'gatsby-plugin-netlify',
   ],
 };

@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 import Aux from 'react-aux';
 import 'prismjs/themes/prism-okaidia.css';
 import Header from '../components/Header';
-import config from '../../gatsby-config';
 import appPackage from '../../package.json';
 import '../css/styles.css';
 
@@ -31,15 +30,11 @@ type Props = {
       },
     },
   },
-  location: {
-    pathname: string,
-  },
   children: Function,
 };
 
 const Template = ({
   data: { site: { siteMetadata: { title, description } } },
-  location,
   children,
 }: Props) => (
   <Aux>
