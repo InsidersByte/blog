@@ -2,6 +2,8 @@
 slug: "/unity-auto-resolver"
 date: "2015-08-17T17:08:00.000Z"
 title: "Unity Auto Resolver"
+featured: false
+draft: false
 tags: ["unity","dependency-injection","csharp"]
 ---
 

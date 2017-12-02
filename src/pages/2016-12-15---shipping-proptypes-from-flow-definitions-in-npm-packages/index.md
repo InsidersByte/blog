@@ -3,6 +3,8 @@ slug: "/shipping-proptypes-from-flow-definitions-in-npm-packages"
 date: "2016-12-15T13:31:15.000Z"
 title: "Shipping PropTypes from Flow definitions in NPM Packages"
 image: "./images/flow-hero-logo.png"
+featured: false
+draft: false
 tags: ["npm","react","flow"]
 ---
 

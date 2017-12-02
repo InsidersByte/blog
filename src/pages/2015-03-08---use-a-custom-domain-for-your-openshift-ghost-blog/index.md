@@ -2,6 +2,8 @@
 slug: "/use-a-custom-domain-for-your-openshift-ghost-blog"
 date: "2015-03-08T19:56:31.000Z"
 title: "Use a Custom Domain for Your OpenShift Ghost Blog"
+featured: false
+draft: false
 tags: ["ghost","openshift","cloudflare"]
 ---
 

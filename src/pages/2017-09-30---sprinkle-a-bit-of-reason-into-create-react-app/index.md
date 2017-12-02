@@ -3,6 +3,7 @@ slug: "/sprinkle-a-bit-of-reason-into-create-react-app"
 date: "2017-09-30T09:53:54.000Z"
 title: "Sprinkle a bit of Reason into Create React App"
 image: "./images/reason-logo.png"
+featured: true
 draft: false
 tags: ["react","reason","create-react-app","ocaml","bucklescript"]
 ---

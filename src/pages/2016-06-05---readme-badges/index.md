@@ -3,6 +3,8 @@ slug: "/readme-badges"
 date: "2016-06-05T13:08:00.000Z"
 title: "README Badges"
 image: "./images/Screen-Shot-2016-05-23-at-09-07-38.png"
+featured: false
+draft: false
 tags: ["github","badges","README"]
 ---
 

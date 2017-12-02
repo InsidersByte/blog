@@ -2,6 +2,8 @@
 slug: "/application-initialization-for-iis-7-5"
 date: "2015-04-21T15:00:57.000Z"
 title: "Application Initialization for IIS 7.5"
+featured: false
+draft: false
 tags: []
 ---
 

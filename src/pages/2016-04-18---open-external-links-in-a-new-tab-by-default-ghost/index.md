@@ -2,6 +2,8 @@
 slug: "/open-external-links-in-a-new-tab-by-default-ghost"
 date: "2016-04-18T17:20:23.000Z"
 title: "Open external links in a new tab by default ghost"
+featured: false
+draft: false
 tags: ["ghost"]
 ---
 

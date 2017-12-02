@@ -2,6 +2,8 @@
 slug: "/git-clone-your-openshift-ghost-blog"
 date: "2015-02-25T11:13:29.000Z"
 title: "Git Clone Your OpenShift Ghost Blog"
+featured: false
+draft: false
 tags: ["ghost","openshift"]
 ---
 

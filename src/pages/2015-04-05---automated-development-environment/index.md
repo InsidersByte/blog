@@ -2,6 +2,8 @@
 slug: "/automated-development-environment"
 date: "2015-04-05T09:44:00.000Z"
 title: "The start of setting up an automated development environment"
+featured: false
+draft: false
 tags: []
 ---
 

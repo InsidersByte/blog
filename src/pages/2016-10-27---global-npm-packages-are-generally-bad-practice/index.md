@@ -3,6 +3,8 @@ slug: "/global-npm-packages-are-generally-bad-practice"
 date: "2016-10-27T19:41:00.000Z"
 title: "Global npm packages are (generally) bad practice"
 image: "./images/npm-logo.png"
+featured: false
+draft: false
 tags: ["npm","node","best-practices"]
 ---
 

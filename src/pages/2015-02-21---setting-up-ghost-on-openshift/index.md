@@ -2,6 +2,8 @@
 slug: "/setting-up-ghost-on-openshift"
 date: "2015-02-21T11:45:12.000Z"
 title: "Starting a New Blog With Ghost and Openshift"
+featured: false
+draft: false
 tags: ["ghost","openshift"]
 ---
 

@@ -2,6 +2,8 @@
 slug: "/creating-charts-in-react-with-d3"
 date: "2016-09-22T06:37:20.000Z"
 title: "Creating Charts in React with D3"
+featured: true
+draft: false
 tags: ["react","d3"]
 ---
 

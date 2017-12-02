@@ -2,6 +2,8 @@
 slug: "/update-your-openshift-ghost-blog"
 date: "2015-02-25T23:40:29.000Z"
 title: "Update Your Ghost Blog"
+featured: false
+draft: false
 tags: ["ghost","openshift"]
 ---
 
