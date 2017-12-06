@@ -5,7 +5,7 @@
   "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
   "private": true,
   "dependencies": {
-    "gatsby": "1.9.127",
+    "gatsby": "1.9.128",
     "gatsby-image": "1.0.27",
     "gatsby-link": "1.6.30",
     "gatsby-plugin-catch-links": "1.0.13",
@@ -32,7 +32,7 @@
     "gatsby-transformer-remark": "1.7.23",
     "gatsby-transformer-sharp": "1.6.15",
     "param-case": "2.1.1",
-    "prismjs": "1.8.4",
+    "prismjs": "1.9.0",
     "raven-js": "3.20.1",
     "react": "16.2.0",
     "react-aux": "1.1.0",
@@ -58,11 +58,11 @@
     "husky": "0.14.3",
     "jest": "21.2.1",
     "lint-staged": "6.0.0",
-    "prettier": "1.8.2",
+    "prettier": "1.9.1",
     "stylelint": "8.3.1",
     "stylelint-config-standard": "18.0.0",
     "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.1.1"
+    "stylelint-processor-styled-components": "1.2.0"
   },
   "scripts": {
     "precommit": "lint-staged",

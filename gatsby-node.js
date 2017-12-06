@@ -1,6 +1,8 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const { createFilePath } = require('gatsby-source-filesystem');
 const paramCase = require('param-case');
 const path = require('path');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
@@ -29,7 +31,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { draft: { ne: true } } }
+        ${
+          isProduction
+            ? 'filter: { frontmatter: { draft: { ne: true } } } }'
+            : ''
+        }
         limit: 1000
       ) {
         edges {
