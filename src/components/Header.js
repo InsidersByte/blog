@@ -3,13 +3,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import colors from '../styles/colors';
 
 type Props = {
   title: string,
 };
 
 const Root = styled.div`
-  background: #663698;
+  background: ${colors.primary};
 `;
 
 const Container = styled.div`

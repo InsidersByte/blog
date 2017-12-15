@@ -32,9 +32,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     {
       allMarkdownRemark(
         ${
-          isProduction
-            ? 'filter: { frontmatter: { draft: { ne: true } } } }'
-            : ''
+          isProduction ? 'filter: { frontmatter: { draft: { ne: true } } }' : ''
         }
         limit: 1000
       ) {
