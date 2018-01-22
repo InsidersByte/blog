@@ -142,7 +142,7 @@ const Template = ({ data }: Props) => {
 
   return (
     <Aux>
-      <Helmet title={`${title} - ${post.frontmatter.title}`} meta={meta} />
+      <Helmet title={`${post.frontmatter.title} | ${title}`} meta={meta} />
 
       <Root>
         <Header>

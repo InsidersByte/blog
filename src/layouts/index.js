@@ -39,7 +39,7 @@ const Template = ({
 }: Props) => (
   <Aux>
     <Helmet
-      title={`${title} - Blog`}
+      title={title}
       meta={[
         {
           name: 'description',

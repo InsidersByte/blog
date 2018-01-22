@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    author: 'InsidersByte',
-    title: 'InsidersByte',
+    author: 'Jonathon Mills-Kelly',
+    title: 'Jonathon Mills-Kelly',
     description:
-      'The blog of the London, UK based software engineer Jonathon Kelly',
-    siteUrl: 'https://insidersbyte.github.io/blog',
+      'The blog of the London, UK based software engineer Jonathon Mills-Kelly',
+    siteUrl: 'https://jonathonmillskelly.com',
     twitterUrl: 'https://twitter.com/insidersbyte',
     githubUrl: 'https://github.com/insidersbyte',
   },
