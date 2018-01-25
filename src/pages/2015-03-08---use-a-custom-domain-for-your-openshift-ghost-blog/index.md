@@ -145,15 +145,13 @@ out your Ghost blog so that it is working with your new domain name.
 
 ###Add a new environment variable to OpenShift To help keep your ghost config
 clean and generic I added an environment variable to OpenShift that points to my
-domain. If you use the rhc tool and run the command `rhc set-env
-OPENSHIFT_APP_DNS_ALIAS=www.yourdomain.com -a yourAppName`. You can if you wish
+domain. If you use the rhc tool and run the command `rhc set-env OPENSHIFT_APP_DNS_ALIAS=www.yourdomain.com -a yourAppName`. You can if you wish
 just add your endpoint straight into your config.js (this is covered later).
 
 ###Update Ghost Config This is the final stage.
 
 You need to open your config.js file in the root of your local Ghost repository
-and change the line `url: 'http://'+process.env.OPENSHIFT_APP_DNS,` to `url:
-'http://'+process.env.OPENSHIFT_APP_DNS_ALIAS,` to make use of the variable we
+and change the line `url: 'http://'+process.env.OPENSHIFT_APP_DNS,` to `url: 'http://'+process.env.OPENSHIFT_APP_DNS_ALIAS,` to make use of the variable we
 setup in the previous step (unless you didn't set it up, in which case you can
 just put your endpoint in here).
 

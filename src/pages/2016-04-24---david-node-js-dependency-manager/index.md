@@ -83,16 +83,13 @@ your README, I add them directly below the title.
 > for the raw Markdown.
 
 If you have any dependencies you can add your dependency badge by adding this to
-your README `[![Dependency
-Status](https://david-dm.org/username/repo.svg)](https://david-dm.org/username/repo)`.
+your README `[![Dependency Status](https://david-dm.org/username/repo.svg)](https://david-dm.org/username/repo)`.
 This will add the badge and wrap it in a link to the David status page.
 
-If you have any dev-dependencies you add them by adding this `[![devDependency
-Status](https://david-dm.org/username/repo/dev-status.svg)](https://david-dm.org/username/repo#info=devDependencies)`
+If you have any dev-dependencies you add them by adding this `[![devDependency Status](https://david-dm.org/username/repo/dev-status.svg)](https://david-dm.org/username/repo#info=devDependencies)`
 
 Finally if you have any peer dependencies you can add them with this
-`[![peerDependency
-Status](https://david-dm.org/username/repo/peer-status.svg)](https://david-dm.org/username/repo#info=peerDependencies)`
+`[![peerDependency Status](https://david-dm.org/username/repo/peer-status.svg)](https://david-dm.org/username/repo#info=peerDependencies)`
 
 Congratulations you now have a README proudly displaying the status of your
 dependencies and at a glance you can see if your repository is up to date!

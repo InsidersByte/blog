@@ -124,7 +124,7 @@ element.innerHTML = `<div class="${styles.className}">
 After running the build steps it will generate something similar to this:
 
 ```js
-<div class="_1X4e_uaGgBSK9k2dt0VkGj">I love CSS Modules.</div>;
+<div class="_1X4e_uaGgBSK9k2dt0VkGj">I love CSS Modules.</div>
 ```
 
 ```stylus

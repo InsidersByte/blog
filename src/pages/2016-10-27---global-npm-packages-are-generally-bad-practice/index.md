@@ -102,8 +102,7 @@ This means if you add something like this to your `package.json`.
 ```
 
 You can now run gulp with `npm run gulp`. If you need to pass additional
-parameters you can do so with `--` so `gulp build` becomes `npm run gulp --
-build`.
+parameters you can do so with `--` so `gulp build` becomes `npm run gulp -- build`.
 
 ## Congratulations
 
@@ -113,8 +112,7 @@ dependencies into your control and how this is achieved.
 ## A sidenote on Bower Install
 
 One thing I see quite often with a front end project is an additional build step
-for bower, beyond the global install, you have to then additionally do a `bower
-install`.
+for bower, beyond the global install, you have to then additionally do a `bower install`.
 
 This can be improved by using the above solution and a `postinstall` script (see
 the [docs](https://docs.npmjs.com/misc/scripts)).
