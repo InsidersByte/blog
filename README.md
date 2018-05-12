@@ -10,23 +10,23 @@ Use this starter kit to jump start (or use as a reference) a great blog with
 
 ## Features
 
-1. Blog post listing with previews for each blog post
-1. Navigation between posts with a previous/next post button
-1. Tags and tag navigation
-1. Responsive images via [gatsby-remark-images][gatsby-remark-images]
-1. Sitemap
-1. Syntax Highlighting (with PrismJS)
-1. Styled Components
-1. Flow
-1. Prettier
-1. Jest
-1. Eslint
+1.  Blog post listing with previews for each blog post
+1.  Navigation between posts with a previous/next post button
+1.  Tags and tag navigation
+1.  Responsive images via [gatsby-remark-images][gatsby-remark-images]
+1.  Sitemap
+1.  Syntax Highlighting (with PrismJS)
+1.  Styled Components
+1.  Flow
+1.  Prettier
+1.  Jest
+1.  Eslint
 
 ## Set up
 
-1. Clone this repo
-1. `yarn`
-1. `yarn start`
+1.  Clone this repo
+1.  `yarn`
+1.  `yarn start`
 
 [gatsby]: https://www.gatsbyjs.org/
 [gatsby-remark-images]: https://www.gatsbyjs.org/docs/packages/gatsby-remark-images/

@@ -11,11 +11,11 @@ So I decided to compile a mini tutorial comprising of five parts, which go
 through the steps involved in starting up a Ghost blog on OpenShift using my
 experiences. The topics covered so far are:
 
-1. [Starting a New Blog With Ghost and Openshift](https://www.insidersbyte.com/setting-up-ghost-on-openshift/)
-2. [Git Clone Your OpenShift Ghost Blog](https://www.insidersbyte.com/git-clone-your-openshift-ghost-blog/)
-3. Update Your Ghost Blog (This Post)
-4. [Use a Custom Domain for Your Ghost Blog](https://www.insidersbyte.com/use-a-custom-domain-for-your-openshift-ghost-blog/)
-5. Free SSL For Your Ghost Blog (Coming soon)
+1.  [Starting a New Blog With Ghost and Openshift](https://www.insidersbyte.com/setting-up-ghost-on-openshift/)
+2.  [Git Clone Your OpenShift Ghost Blog](https://www.insidersbyte.com/git-clone-your-openshift-ghost-blog/)
+3.  Update Your Ghost Blog (This Post)
+4.  [Use a Custom Domain for Your Ghost Blog](https://www.insidersbyte.com/use-a-custom-domain-for-your-openshift-ghost-blog/)
+5.  Free SSL For Your Ghost Blog (Coming soon)
 
 ###Outcome of this tutorial Update your Ghost blog. I have followed the
 instructions from the Ghost main website
@@ -58,16 +58,16 @@ am talking about don't worry we will be modifying this is later posts.
 
 ###Getting on with updating
 
-1. Make sure you have backed up!
-2. Download the latest release from [here](http://ghost.org/download)
-3. Extract the zip file to a temporary location
-4. Replace your existing index.js and package.json files with the new files
-5. Delete the `core` folder and put the new on in it's place
-6. Delete the `content/themes/casper` folder and put the new one in it's place
-7. If you are using OpenShift you need to edit package.json and replace
-   `./core/index` with `./index`
-8. Open a command prompt in the root of your git repository
-9. Run `git add -A`
+1.  Make sure you have backed up!
+2.  Download the latest release from [here](http://ghost.org/download)
+3.  Extract the zip file to a temporary location
+4.  Replace your existing index.js and package.json files with the new files
+5.  Delete the `core` folder and put the new on in it's place
+6.  Delete the `content/themes/casper` folder and put the new one in it's place
+7.  If you are using OpenShift you need to edit package.json and replace
+    `./core/index` with `./index`
+8.  Open a command prompt in the root of your git repository
+9.  Run `git add -A`
 10. Run `git commit -m "Updated Ghost"` (you can change 'Updated Ghost to
     whatever commit message you want)
 11. Run `git push`

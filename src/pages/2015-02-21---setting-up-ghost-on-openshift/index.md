@@ -14,11 +14,11 @@ So I decided to compile a mini tutorial comprising of five parts, which go
 through the steps involved in starting up a Ghost blog on OpenShift using my
 experiences. The topics covered so far are:
 
-1. Starting a New Blog With Ghost and Openshift (This Post)
-2. [Git Clone Your OpenShift Ghost Blog](https://www.insidersbyte.com/git-clone-your-openshift-ghost-blog/)
-3. [Update Your Ghost Blog](https://www.insidersbyte.com/update-your-openshift-ghost-blog/)
-4. [Use a Custom Domain for Your Ghost Blog](https://www.insidersbyte.com/use-a-custom-domain-for-your-openshift-ghost-blog/)
-5. Free SSL For Your Ghost Blog (Coming soon)
+1.  Starting a New Blog With Ghost and Openshift (This Post)
+2.  [Git Clone Your OpenShift Ghost Blog](https://www.insidersbyte.com/git-clone-your-openshift-ghost-blog/)
+3.  [Update Your Ghost Blog](https://www.insidersbyte.com/update-your-openshift-ghost-blog/)
+4.  [Use a Custom Domain for Your Ghost Blog](https://www.insidersbyte.com/use-a-custom-domain-for-your-openshift-ghost-blog/)
+5.  Free SSL For Your Ghost Blog (Coming soon)
 
 ###Outcome of This Tutorial Have a free Ghost blog hosted on OpenShift.
 

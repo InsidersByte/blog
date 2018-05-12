@@ -20,9 +20,9 @@ The precursor to `flow` is [PropTypes], which is built directly into `react`.
 
 The three key differences between PropTypes and flow are:
 
-1. `flow` can be used in all JavaScript files and not just in `React` components
-1. typing is checked at runtime with `PropTypes` and at compile time with `flow`
-1. `PropTypes` are quite limited in comparison to `flow`
+1.  `flow` can be used in all JavaScript files and not just in `React` components
+1.  typing is checked at runtime with `PropTypes` and at compile time with `flow`
+1.  `PropTypes` are quite limited in comparison to `flow`
 
 > For example, it’s possible to specify that a prop is some kind of function
 > with `PropTypes`, but not what parameters that function accepts or what kind

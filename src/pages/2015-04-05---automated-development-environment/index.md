@@ -38,8 +38,8 @@ looking into puppet again this is another skill I wanted to learn as well.
 
 I am currently going through a couple of tutorials on this subject.
 
-1. [Pluralsight course - puppet system adminstrators fundamentals](http://www.pluralsight.com/courses/puppet-system-administrators-fundamentals)
-2. [Puppet's offical learn course](https://puppetlabs.com/learn)
+1.  [Pluralsight course - puppet system adminstrators fundamentals](http://www.pluralsight.com/courses/puppet-system-administrators-fundamentals)
+2.  [Puppet's offical learn course](https://puppetlabs.com/learn)
 
 #####Jenkins Another technology I am looking into is continous intergration and
 continous delivery. I have worked mainly with TFS before, but at home I don't

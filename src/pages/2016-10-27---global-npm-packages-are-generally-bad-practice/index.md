@@ -31,16 +31,16 @@ Before I get to the problem, I want to identify the different types of global
 packages. Most globally installed packages are CLIs and there are two different
 types:
 
-1. **Non-project dependencies** - These are non-project dependencies, some
-   examples of these are
-   [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) and
-   [create-react-app](https://www.npmjs.com/package/create-react-app).
+1.  **Non-project dependencies** - These are non-project dependencies, some
+    examples of these are
+    [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) and
+    [create-react-app](https://www.npmjs.com/package/create-react-app).
 
-1. **Project dependencies** - These are packages that a project a project
-   depends on, some common ones here are
-   [bower](https://www.npmjs.com/package/bower),
-   [gulp](https://www.npmjs.com/package/gulp),
-   [grunt-cli](https://www.npmjs.com/package/grunt-cli).
+1.  **Project dependencies** - These are packages that a project a project
+    depends on, some common ones here are
+    [bower](https://www.npmjs.com/package/bower),
+    [gulp](https://www.npmjs.com/package/gulp),
+    [grunt-cli](https://www.npmjs.com/package/grunt-cli).
 
 ## So what is the issue
 
@@ -49,10 +49,10 @@ same!
 
 **Project dependencies** on the other hand do, which are:
 
-1. They are an extra install step, as you have to run `npm install -g PACKAGE`
-   as well as `npm install`.
+1.  They are an extra install step, as you have to run `npm install -g PACKAGE`
+    as well as `npm install`.
 
-1. They aren't listed as a dependency in your `package.json`.
+1.  They aren't listed as a dependency in your `package.json`.
 
 The first issue is a minor one, as you need to keep your documentation up to
 date with what global packages need to be installed and you create an
@@ -117,8 +117,8 @@ for bower, beyond the global install, you have to then additionally do a `bower 
 This can be improved by using the above solution and a `postinstall` script (see
 the [docs](https://docs.npmjs.com/misc/scripts)).
 
-1. **Install Dependency** - run `npm install --save-dev bower`.
-2. **Add postinstall script** - see below.
+1.  **Install Dependency** - run `npm install --save-dev bower`.
+2.  **Add postinstall script** - see below.
 
 ```json
 {

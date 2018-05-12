@@ -25,13 +25,13 @@ styling in React by [Vjeux](https://twitter.com/vjeux?lang=en-gb) about how we
 should challenge the status quo, which seems to be a reoccurring theme with
 React! Vjeux states that the problems with CSS at scale are:
 
-1. Global Namespace
-2. Dependencies
-3. Dead Code Elimination
-4. Minification
-5. Sharing Constants
-6. Non-deterministic Resolution
-7. Isolation
+1.  Global Namespace
+2.  Dependencies
+3.  Dead Code Elimination
+4.  Minification
+5.  Sharing Constants
+6.  Non-deterministic Resolution
+7.  Isolation
 
 ## The Evolution of Styling in React
 

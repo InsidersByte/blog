@@ -31,10 +31,10 @@ React.js, and D3.js.
 
 ## Chart Requirements
 
-1. Must be written in React and not D3
-1. Chart data must be stored in Redux or local state (as appropriate) and not
-   internal to D3
-1. React must do all of the rendering
+1.  Must be written in React and not D3
+1.  Chart data must be stored in Redux or local state (as appropriate) and not
+    internal to D3
+1.  React must do all of the rendering
 
 ## The search for a library
 

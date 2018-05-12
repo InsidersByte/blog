@@ -100,19 +100,19 @@ This displays some more detailed stats of the NPM package.
 
 I get this from [Shields.io](http://shields.io/).
 
-1. Go to the `Version` section, and click npm (or scoped, if your package is
-   scoped)
-2. Type in the name of your package
-3. Copy the Markdown into your README
+1.  Go to the `Version` section, and click npm (or scoped, if your package is
+    scoped)
+2.  Type in the name of your package
+3.  Copy the Markdown into your README
 
 #### Build Status
 
 I use [Travis CI](https://travis-ci.org/) as my continous integration server for
 public repos.
 
-1. Go to the travis page for your project
-2. Click on the build shield, select your branch and the format
-3. Copy the Markdown into your README
+1.  Go to the travis page for your project
+2.  Click on the build shield, select your branch and the format
+3.  Copy the Markdown into your README
 
 > I use [circleci](https://circleci.com/) for my private repos. It has a similar
 > process.
@@ -121,21 +121,21 @@ public repos.
 
 I use [Coveralls](https://coveralls.io) as my coverage status reporter.
 
-1. Go to the detailed view for your project
-2. Look for the `README BADGE` section (right hand sidebar on desktop)
-3. Click `Embed` and copy the Markdown into your README
+1.  Go to the detailed view for your project
+2.  Look for the `README BADGE` section (right hand sidebar on desktop)
+3.  Click `Embed` and copy the Markdown into your README
 
 #### [Code Climate](https://codeclimate.com/)
 
-1. Go to the detailed view for your project
-2. Click on the code climate badge (as seen above)
-3. Copy the Markdown into your README
+1.  Go to the detailed view for your project
+2.  Click on the code climate badge (as seen above)
+3.  Copy the Markdown into your README
 
 #### [bitHound](https://www.bithound.io/)
 
-1. Go to the detailed view for your project
-2. Find the `OVERALL BADGE` and click `Add this badge`
-3. Copy the Markdown into your README
+1.  Go to the detailed view for your project
+2.  Find the `OVERALL BADGE` and click `Add this badge`
+3.  Copy the Markdown into your README
 
 #### Dependency Status (including Peer and Development)
 
